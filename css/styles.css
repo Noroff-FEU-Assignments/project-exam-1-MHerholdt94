@@ -1,11 +1,17 @@
+/* GLOBAL STYLES */
+
 :root {
     --blue: #0000FF;
     --light-red: #FF4D52;
     --red: #C1272D;
+    --red-transparent: #c1272c28;
     --dark-red: #8F1D20;
+    --dark-red-transparent: #8f1d2150;
     --green: #00751F;
     --light-green: #27C250;
     --blue-green: #0C7563;
+    --dark-blue-green: #024035;
+    --blue-green-transparent: #0c756426;
     --light-brown: #A67C52;
     --brown: #754C24;
     --dark-brown: #603813;
@@ -15,97 +21,441 @@
     --grey: #707070;
     --dark-grey: #303030;
     --black: #000000;
+    --black-shadow: #00000016;
+    --black-transparent: #00000090;
 }
 
-/* * {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    margin: auto;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
-
-h1 {
-    font-family: "Timonium", Arial, Helvetica, sans-serif;
-    font-weight: 300!important;
-    text-transform: capitalize;
+* {
+    box-sizing: border-box;
+    font-family: "Articulat CF", sans-serif;
     color: var(--dark-grey);
-}
-
-h2 {
-    font-family: "Timonium", Arial, Helvetica, sans-serif;
-    text-transform: capitalize;
-    color: var(--dark-grey);
-}
-
-p {
-    color: var(--dark-grey);
+    margin: 0;
 }
 
 main {
-    width: 812px;
+    max-width: 80%;
+    margin: 100px auto;
 }
 
-.test-container h1 {
+h1, h2, h3, h4 {
+    font-family: "Timonium", sans-serif;
+    font-style: italic;
+}
+
+h1 {
+    font-size: 96px;
+    font-weight: 300;
+    line-height: 90px;
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+h5 {
+    font-family: "Articulat CF", sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+label {
+    font-weight: 700;
+}
+
+.header-top {
+    background-color: var(--black);
+}
+
+.header-logo {
+    width: 300px;
+    margin-left: 100px;
+}
+
+.header-nav {
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 1px solid var(--dark-red-transparent);
+    border-style: solid none solid none;
+}
+
+.header-nav a {
+    color: var(--white);
+    background-color: var(--black);
+    padding: 20px;
+    width: 160px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.header-nav a:hover {
+    background-color: var(--dark-red);
+    color: var(--white);
+}
+
+.header-img {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     text-align: center;
 }
 
-.test-container h2 {
-    margin: 50px auto 10px auto;
+.header-black {
+    background-color: var(--black);
 }
 
-.wp-post-image {
-    width: 812px;
+.header-title {
+    background-image: linear-gradient(180deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.3) 10%,
+    rgba(0,0,0,0.8) 30%,
+    rgba(0,0,0,1)75%);
 }
 
-.wp-image-15 {
-    width: 812px;
-    height: 150px;
-    object-fit: cover;
+.header-title h1 {
+    padding: 50px 0 10px 0;
+    color: var(--white);
+}
+
+.header-title p {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+    padding-bottom: 18px;
+}
+
+.header-img_small h1 {
+    margin-top: 180px;
+}
+
+/* BUTTONS/CTA */
+
+.cta {
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: none;
+    text-transform: capitalize;
+    font-size: 21px;
+    font-weight: 900;
+    box-shadow: 0 3px 6px var(--black-shadow);
+}
+
+.btn-green {
+    background-color: var(--blue-green-transparent);
+    color: var(--blue-green);
+}
+
+.btn-green:hover {
+    background-color: var(--blue-green);
+    color: var(--white);
+}
+
+.btn-red {
+    background-color: var(--red-transparent);
+    color: var(--red);
+}
+
+.btn-red:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.btn-newsletter {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: 900;
+    background-color: var(--blue-green);
+    color: var(--white);
+    box-shadow: 0 3px 3px var(--dark-blue-green);
+}
+
+.btn-newsletter:hover {
+    padding: 9px 19px;
+    border: 1px solid var(--blue-green);
+    background-color: var(--white);
+    color: var(--blue-green);
+}
+
+/* HOME PAGE */
+
+.index-center {
+    background: -webkit-linear-gradient(left, 
+    rgba(0,0,0,1) 0%, 
+    rgba(0,0,0,0) 15%, 
+    rgba(0,0,0,0) 85%, 
+    rgba(0,0,0,1) 100%), 
+    url(../images/playing.jpg);
+
+    background-size: cover;
+    background-position: 0 60%;
+}
+
+.index-center h1 {
+    margin-top: 300px;
+}
+
+.latest-container h2 {
+    margin-left: 50px;
+}
+
+.latest-slider {
+    display: flex;
+    border: 3px solid var(--dark-red);
+    border-style: solid none solid none;
+    padding: 50px 0;
+    gap: 20px;
+}
+
+.latest-slider button {
+    border: none;
+    margin: auto 20px;
+    padding: 0;
+    height: 40px;
+    width: 55.48px;
+    border-radius: 5px;
+    background-color: var(--dark-grey);
+}
+
+.latest-slider i {
+    color: var(--white);
+    font-size: 22px;
+    vertical-align: middle;
+}
+.latest-post_top {
+    height: 50%;
+    background-image: linear-gradient(180deg,
+    rgba(0,0,0,0.2) 0%,
+    rgba(0,0,0,0.7) 100%);
+
+    border-radius: 10px 10px 0 0;
+}
+
+.latest-post_text {
+    height: 50%;
+    background-image: linear-gradient(180deg,
+    rgba(0,0,0,0.7) 0%,
+    rgba(0,0,0,1) 50%,
+    rgba(0,0,0,1) 100%);
+    padding: 16px;
+
+    border-radius: 0 0 10px 10px;
+}
+
+.latest-post {
+    background-image: url(../images/cymbals-bwc.jpg);
+    background-size: cover;
+    height: 320px;
+    border-radius: 10px;
+}
+
+.latest-post h3, .latest-post_preamble {
+    color: var(--white);
+}
+
+.latest-post .post-category {
+    margin-bottom: 10px;
+}
+
+.post-category {
+    font-weight: 800;
+    color: var(--grey);
+    text-transform: uppercase;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: space-around;
+    margin: 100px auto;
+    background-color: var(--dark-grey);
+    padding: 50px;
+}
+
+.newsletter * {
+    color: var(--white);
+}
+
+.index-category_container h3 {
+    border-bottom: 1px solid var(--dark-grey);
+    padding-left: 50px;
+}
+
+.index-category_container {
     margin-bottom: 50px;
 }
 
-.audio-block audio {
-    width: 100%;
+.index-category, .index-category_post {
+    display: flex;
+}
+
+.index-category {
+    margin: 20px 50px;
+}
+
+.index-category_post {
+    gap: 10px;
+}
+
+.index-category img {
+    width: 220px;
+    border-radius: 10px;
+}
+
+/* CONTACT PAGE */
+
+.contact-center {
+    background: -webkit-linear-gradient(left, 
+    rgba(0,0,0,1) 0%, 
+    rgba(0,0,0,0) 15%, 
+    rgba(0,0,0,0) 75%, 
+    rgba(0,0,0,1) 100%), 
+    url(../images/microphone.jpg);
+
+    background-size: cover;
+    background-position: 0 50%;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 75%;
+}
+
+/* ABOUT PAGE*/
+
+.about-center {
+    background: -webkit-linear-gradient(left, 
+    rgba(0,0,0,1) 0%, 
+    rgba(0,0,0,0) 15%, 
+    rgba(0,0,0,0) 75%, 
+    rgba(0,0,0,1) 100%), 
+    url(../images/behind-bw.jpg);
+
+    background-size: cover;
+    background-position: 0 50%;
+}
+
+.about-container {
+    width: 75%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 32px;
+    border-bottom: 1px solid var(--dark-grey);
+    padding: 0 20px 50px 20px;
+}
+
+.about-container h5, .lessons-container h5 {
+    margin: 10px 0;
+}
+
+.about-img img {
+    max-width: 480px;
+    border-radius: 10px;
+}
+
+.lessons-container {
+    width: 75%;
+    margin: 50px auto 0 auto;
+    padding: 0 20px;
+}
+
+.lessons-header {
     margin-bottom: 30px;
 }
 
-.test-container p, .test-container li {
+.lessons-header h3 {
+    position: absolute;
+    color: var(--white);
+    padding: 20px;
+    background-color: var(--black-transparent);
+    border-radius: 10px 0 10px 0;
+}
+
+.lessons-header img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.lessons-details {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 32px;
+}
+
+.lessons-details img {
+    max-width: 480px;
+    border-radius: 10px;
+}
+
+.about-btn {
+    position: relative;
+    top: 36px;
+}
+
+
+/* BLOG LIST PAGE */
+
+.bloglist-center {
+    background: -webkit-linear-gradient(left, 
+    rgba(0,0,0,1) 0%, 
+    rgba(0,0,0,0) 15%, 
+    rgba(0,0,0,0) 75%, 
+    rgba(0,0,0,1) 100%), 
+    url(../images/sticks-bw.jpg);
+
+    background-size: cover;
+    background-position: 0 50%;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--dark-grey);
+    padding: 60px 0;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer * {
+    color: var(--white);
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+footer input {
     color: var(--dark-grey);
 }
 
-.wp-container-1 {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    font-weight: 600;
-    color: var(--grey);
-    text-transform: uppercase;
-    width: 50%;
+.footer-contact {
+    margin-bottom: 20px;
 }
 
-.wp-container-1 p {
-    color: var(--grey);
-    margin: auto!important;
+.footer-phone {
+    margin: 10px 0;
 }
-
-.wp-block-categories-list {
-    padding: 0;
-}
-
-.wp-block-categories-list li {
-    list-style: none;
-}
-
-.wp-block-categories-list li a {
-    color: var(--grey);
-}
-
-.wp-container-2 {
-    margin-bottom: 30px;
-}
-
-.test-container p {
-    margin-bottom: 30px;
-} */
