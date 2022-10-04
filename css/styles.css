@@ -10,6 +10,7 @@
     --green: #00751F;
     --light-green: #27C250;
     --blue-green: #0C7563;
+    --light-blue-green: #1ed5b7;
     --dark-blue-green: #024035;
     --blue-green-transparent: #0c756426;
     --light-brown: #A67C52;
@@ -20,8 +21,9 @@
     --light-grey: #F0F0F0;
     --grey: #707070;
     --dark-grey: #303030;
+    --dark-grey-transparent: #30303030;
     --black: #000000;
-    --black-shadow: #00000016;
+    --black-shadow: #00000036;
     --black-transparent: #00000090;
 }
 
@@ -147,6 +149,46 @@ label {
     margin-top: 180px;
 }
 
+.breadcrumb {
+    background-color: var(--dark-grey-transparent);
+}
+
+.breadcrumb div {
+    width: 58%;
+    margin: auto;
+    padding: 8px 0;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.newsletter-email {
+    height: 40px;
+    width: 100%;
+    border: none;
+    margin: 4px 0 10px 0;
+    color: var(--dark-grey)!important;
+    background-color: var(--light-grey);
+    font-size: 1em;
+    padding-left: 8px;
+}
+
+.newsletter-email:hover {
+    border: 2px solid var(--blue-green);
+    border-style: none none solid none;
+}
+
+.newsletter-email:focus {
+    border: 2px solid var(--blue-green);
+    border-style: none none solid none;
+    outline: none;
+}
+
+.newsletter-form h4 {
+    margin-bottom: 10px;
+}
+
 /* BUTTONS/CTA */
 
 .cta {
@@ -162,6 +204,7 @@ label {
 .btn-green {
     background-color: var(--blue-green-transparent);
     color: var(--blue-green);
+    transition: 0.1s;
 }
 
 .btn-green:hover {
@@ -172,6 +215,7 @@ label {
 .btn-red {
     background-color: var(--red-transparent);
     color: var(--red);
+    transition: 0.1s;
 }
 
 .btn-red:hover {
@@ -179,22 +223,35 @@ label {
     color: var(--white);
 }
 
+.btn-arrow {
+    border: none;
+    margin: auto 20px;
+    padding: 9px;
+    border-radius: 5px;
+    background-color: var(--dark-grey);
+}
+
+.btn-arrow i {
+    color: var(--white);
+    font-size: 22px;
+    width: 22px;
+}
+
 .btn-newsletter {
     padding: 10px 20px;
     border-radius: 10px;
-    border: none;
+    border: 1px solid var(--blue-green);
     font-size: 18px;
     font-weight: 900;
     background-color: var(--blue-green);
-    color: var(--white);
     box-shadow: 0 3px 3px var(--dark-blue-green);
+    transition: 0.1s;
 }
 
 .btn-newsletter:hover {
-    padding: 9px 19px;
-    border: 1px solid var(--blue-green);
     background-color: var(--white);
     color: var(--blue-green);
+    cursor: pointer;
 }
 
 /* HOME PAGE */
@@ -227,21 +284,6 @@ label {
     gap: 20px;
 }
 
-.latest-slider button {
-    border: none;
-    margin: auto 20px;
-    padding: 0;
-    height: 40px;
-    width: 55.48px;
-    border-radius: 5px;
-    background-color: var(--dark-grey);
-}
-
-.latest-slider i {
-    color: var(--white);
-    font-size: 22px;
-    vertical-align: middle;
-}
 .latest-post_top {
     height: 50%;
     background-image: linear-gradient(180deg,
@@ -284,8 +326,6 @@ label {
 }
 
 .newsletter {
-    display: flex;
-    justify-content: space-around;
     margin: 100px auto;
     background-color: var(--dark-grey);
     padding: 50px;
@@ -293,6 +333,21 @@ label {
 
 .newsletter * {
     color: var(--white);
+}
+
+.newsletter-content {
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    width: 75%;
+    margin: auto;
+}
+
+.newsletter-content p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    width: 68%;
 }
 
 .index-category_container h3 {
@@ -321,6 +376,14 @@ label {
     border-radius: 10px;
 }
 
+.btn-container {
+    text-align: right;
+}
+
+.btn-up {
+    margin: 50px auto 0 auto;
+}
+
 /* CONTACT PAGE */
 
 .contact-center {
@@ -339,6 +402,88 @@ label {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 75%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px var(--black-shadow);
+}
+
+.contact-form {
+    padding: 30px 20px;
+    margin: auto;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+}
+
+.contact-input {
+    background-color: var(--light-grey);
+    border: 2px solid var(--light-grey);
+    border-style: none none solid none;
+    padding: 0 8px;
+    margin: 4px 0;
+    font-size: 1em;
+    transition: 0.1s;
+}
+
+.contact-text {
+    height: 40px;
+}
+
+.contact-textarea {
+    height: 150px;
+    padding: 8px;
+    resize: none;
+}
+
+.contact-input:hover {
+    border: 2px solid var(--dark-grey);
+    border-style: none none solid none;
+}
+
+.contact-input:focus {
+    outline: none;
+    border: 2px solid var(--dark-grey);
+    border-style: none none solid none;
+}
+
+.contact-form label {
+    margin-top: 30px;
+    padding-left: 4px;
+}
+
+.form-requirement {
+    color: var(--light-red);
+    padding-left: 4px;
+}
+
+.contact-form input[type=submit] {
+   border: 2px solid var(--blue-green);
+   border-radius: 10px;
+   height: 60px;
+   width: 150px;
+   font-weight: 900;
+   text-transform: capitalize;
+   box-shadow: 0 3px 6px var(--black-shadow);
+   margin-top: 30px;
+   font-size: 21px;
+   transition: 0.1s;
+}
+
+.contact-form input[type=submit]:hover {
+    background-color: var(--blue-green);
+    color: var(--white);
+    border: 2px solid var(--blue-green);
+    cursor: pointer;
+}
+
+.contact-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 10px 10px 0;
 }
 
 /* ABOUT PAGE*/
@@ -445,11 +590,11 @@ footer * {
 }
 
 footer a {
-    text-decoration: underline;
+    color: var(--light-blue-green);
 }
 
-footer input {
-    color: var(--dark-grey);
+footer a:hover {
+   text-decoration: underline;
 }
 
 .footer-contact {

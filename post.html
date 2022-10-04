@@ -27,7 +27,14 @@
         </div>
 
 
-        <div class="breadcrumb"></div>
+        <div class="breadcrumb">
+            <div>
+                <a href="index.html">home</a>
+                <span>/</span>
+                <a href="bloglist.html">blog list</a>
+                <span>/ about us</span>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -43,11 +50,13 @@
             <p>EMAIL time@signature.com</p>
         </div>
 
-        <div class="footer-right">
+        <div class="newsletter-form">
             <h4>Sign up for our newsletter</h4>
-            <label for="footeremail">E-mail</label>
-            <input type="email" name="footeremail">
-            <button class="btn-newsletter">Confirm</button>
+            <form>
+                <label for="footeremail">E-mail</label>
+                <input type="email" name="footeremail" class="newsletter-email" required>
+                <input type="submit" class="btn-newsletter">
+            </form>
         </div>
     </footer>
 </body>

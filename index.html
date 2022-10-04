@@ -43,7 +43,7 @@
         <div class="latest-container">
             <h2>Latest posts</h2>
             <div class="latest-slider">
-                <button><i class="fa-solid fa-angles-left"></i></button>
+                <button class="btn-arrow btn-left"><i class="fa-solid fa-angle-left"></i></i></button>
                 <a href="#" class="latest-post">
                     <div class="latest-post_top"></div>
                     <div class="latest-post_text">
@@ -55,7 +55,6 @@
                             voluptua.</p>
                     </div>
                 </a>
-
                 <a href="#" class="latest-post">
                     <div class="latest-post_top"></div>
                     <div class="latest-post_text">
@@ -67,7 +66,6 @@
                             voluptua.</p>
                     </div>
                 </a>
-
                 <a href="#" class="latest-post">
                     <div class="latest-post_top"></div>
                     <div class="latest-post_text">
@@ -80,25 +78,29 @@
                             voluptua.</p>
                     </div>
                 </a>
-                <button><i class="fa-solid fa-angles-right"></i></button>
+                <button class="btn-arrow btn-right"><i class="fa-solid fa-angle-right"></i></i></button>
             </div>
         </div>
 
         <div class="newsletter">
-            <div class="newsletter-left">
-                <h2>Sign up for our newsletter!</h2>
-                <p>Get a head start on everything new in the world of drumming by signing up for our weekly newsletter.
-                    It's free!</p>
-            </div>
-            <div class="newsletter-right">
-                <label for="newsemail">E-mail</label>
-                <input type="email" id="newsemail" name="newsemail">
-                <button class="btn-newsletter">Confirm</button>
+            <div class="newsletter-content">
+                <div class="newsletter-left">
+                    <h2>Sign up for our newsletter!</h2>
+                    <p>Get a head start on everything new in the world of drumming by signing up for our weekly
+                        newsletter.
+                        It's free!</p>
+                </div>
+                <div class="newsletter-form newsletter-right">
+                    <form>
+                        <label for="newsemail">E-mail</label>
+                        <input type="email" id="newsemail" name="newsemail" class="newsletter-email" required>
+                        <input type="submit" class="btn-newsletter">
+                    </form>
+                </div>
             </div>
         </div>
 
         <div class="index-categories">
-
             <div class="index-category_container">
                 <h3>Category</h3>
                 <div class="index-category">
@@ -122,7 +124,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="index-category_container">
                 <h3>Category</h3>
                 <div class="index-category">
@@ -146,7 +147,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="index-category_container">
                 <h3>Category</h3>
                 <div class="index-category">
@@ -170,8 +170,12 @@
                     </a>
                 </div>
             </div>
-
         </div>
+
+        <div class="btn-container">
+            <button class="btn-arrow btn-up"><i class="fa-solid fa-angle-up"></i></i></button>
+        </div>
+
     </main>
 
     <footer>
@@ -183,11 +187,13 @@
             <p>EMAIL time@signature.com</p>
         </div>
 
-        <div class="footer-right">
+        <div class="newsletter-form">
             <h4>Sign up for our newsletter</h4>
-            <label for="footeremail">E-mail</label>
-            <input type="email" name="footeremail">
-            <button class="btn-newsletter">Confirm</button>
+            <form>
+                <label for="footeremail">E-mail</label>
+                <input type="email" name="footeremail" class="newsletter-email" required>
+                <input type="submit" class="btn-newsletter">
+            </form>
         </div>
     </footer>
 
