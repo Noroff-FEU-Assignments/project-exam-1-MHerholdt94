@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/qqa3pav.css">
     <link href="css/styles.css" rel="stylesheet">
     <script defer src="js/index.js"></script>
+    <script defer src="js/indextest.js"></script>
 </head>
 
 <body>
@@ -42,7 +43,34 @@
 
     <main>
 
-        <div class="carousel-container"></div>
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev"><i
+                    class="fa-solid fa-angle-left"></i></button>
+            <button class="carousel-button next" data-carousel-button="next"><i
+                    class="fa-solid fa-angle-right"></i></button>
+            <ul class="slide-container" data-slides>
+                <li class="slide" data-active>
+                    <div class="slide-post">SLIDE 1</div>
+                    <div class="slide-post">SLIDE 2</div>
+                    <div class="slide-post">SLIDE 3</div>
+                </li>
+                <li class="slide">
+                    <div class="slide-post">SLIDE 4</div>
+                    <div class="slide-post">SLIDE 5</div>
+                    <div class="slide-post">SLIDE 6</div>
+                </li>
+                <li class="slide">
+                    <div class="slide-post">SLIDE 7</div>
+                    <div class="slide-post">SLIDE 8</div>
+                    <div class="slide-post">SLIDE 9</div>
+                </li>
+                <li class="slide">
+                    <div class="slide-post">SLIDE 10</div>
+                    <div class="slide-post">SLIDE 11</div>
+                    <div class="slide-post">SLIDE 12</div>
+                </li>
+            </ul>
+        </div>
 
         <div class="index-latest">
             <h2>Latest posts</h2>

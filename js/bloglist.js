@@ -3,10 +3,11 @@ const baseUrl =
 
 const newestContainer = document.querySelector(".newest-container");
 const featuredContainer = document.querySelector(".featured-container");
-const bloglistBottom = document.querySelector(".bloglist-bottom");
+const blogListBottom = document.querySelector(".bloglist-bottom");
 const allContainer = document.querySelector(".all-container");
 
-const seeMore = document.querySelector(".btn-seemore");
+const viewMore = document.querySelector("#viewMore");
+const viewLess = document.querySelector("#viewLess");
 
 async function blogList(url) {
   try {
@@ -76,7 +77,14 @@ async function blogList(url) {
 
 blogList(baseUrl);
 
-seeMore.onclick = function () {
-  bloglistBottom.style.display = "block";
-  seeMore.style.display = "none";
+viewMore.onclick = function () {
+  blogListBottom.style.display = "block";
+  viewMore.style.display = "none";
+  viewLess.style.display = "block";
+};
+
+viewLess.onclick = function () {
+  blogListBottom.style.display = "none";
+  viewMore.style.display = "block";
+  viewLess.style.display = "none";
 };
