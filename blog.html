@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIME/SIGNATURE | Page</title>
+    <title id="title">TIME/SIGNATURE | Page</title>
     <script src="https://kit.fontawesome.com/c609dd8d17.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/qqa3pav.css">
     <link href="css/styles.css" rel="stylesheet">
+    <script defer src="js/post.js"></script>
 </head>
 
 <body>
@@ -26,18 +27,38 @@
             <a href="contact.html">CONTACT</a>
         </div>
 
+        <div class="header-img">
+            <div class="header-black"></div>
+            <div class="post-center header-img_post">
+                <div class="header-title">
+                    <h1 id="postHeader"></h1>
+                    <p id="postSub"></p>
+                </div>
+            </div>
+            <div class="header-black"></div>
+        </div>
 
         <div class="breadcrumb">
             <div>
-                <a href="index.html">home</a>
+                <a href="index.html">Home</a>
                 <span>/</span>
-                <a href="bloglist.html">blog list</a>
-                <span>/ about us</span>
+                <a href="bloglist.html">Blog List</a>
+                <span id="postBreadcrumb"></span>
             </div>
         </div>
     </header>
 
     <main>
+
+        <div class="post-container">
+            <div class="loading"></div>
+        </div>
+
+        <button class="btn-up">
+            <span>
+                <i class="fa-solid fa-angle-up"></i>
+            </span>
+        </button>
 
     </main>
 

@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/c609dd8d17.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/qqa3pav.css">
     <link href="css/styles.css" rel="stylesheet">
+    <script defer src="js/index.js"></script>
 </head>
 
 <body>
@@ -40,45 +41,17 @@
     </header>
 
     <main>
-        <div class="latest-container">
+
+        <div class="carousel-container"></div>
+
+        <div class="index-latest">
             <h2>Latest posts</h2>
-            <div class="latest-slider">
-                <button class="btn-arrow btn-left"><i class="fa-solid fa-angle-left"></i></i></button>
-                <a href="#" class="latest-post">
-                    <div class="latest-post_top"></div>
-                    <div class="latest-post_text">
-                        <h3>Article Title</h3>
-                        <p class="post-category">Category</p>
-                        <p class="latest-post_preamble">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                            diam nonumy eirmod tempor.</p>
-                        <p class="latest-post_preamble">Ividunt ut labore et dolore magna aliquyam erat, sed diam
-                            voluptua.</p>
-                    </div>
-                </a>
-                <a href="#" class="latest-post">
-                    <div class="latest-post_top"></div>
-                    <div class="latest-post_text">
-                        <h3>Article Title</h3>
-                        <p class="post-category">Category</p>
-                        <p class="latest-post_preamble">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                            diam nonumy eirmod tempor.</p>
-                        <p class="latest-post_preamble">Ividunt ut labore et dolore magna aliquyam erat, sed diam
-                            voluptua.</p>
-                    </div>
-                </a>
-                <a href="#" class="latest-post">
-                    <div class="latest-post_top"></div>
-                    <div class="latest-post_text">
-                        <h3>Article Title</h3>
-                        <p class="post-category">Category</p>
-                        <p class="latest-post_preamble">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                            diam nonumy
-                            eirmod tempor.</p>
-                        <p class="latest-post_preamble">Ividunt ut labore et dolore magna aliquyam erat, sed diam
-                            voluptua.</p>
-                    </div>
-                </a>
-                <button class="btn-arrow btn-right"><i class="fa-solid fa-angle-right"></i></i></button>
+            <div class="slider-container">
+                <button class="btn-left slider-btn"><i class="fa-solid fa-angle-left"></i></button>
+                <button class="btn-right slider-btn"><i class="fa-solid fa-angle-right"></i></button>
+                <div class="slider-posts">
+                    <div class="loading"></div>
+                </div>
             </div>
         </div>
 
@@ -100,9 +73,9 @@
             </div>
         </div>
 
-        <div class="index-categories">
+        <!-- <div class="index-categories">
             <div class="index-category_container">
-                <h3>Category</h3>
+                <h3>Article</h3>
                 <div class="index-category">
                     <a href="#" class="index-category_post">
                         <img src="/images/cymbals-bwc.jpg">
@@ -125,7 +98,7 @@
                 </div>
             </div>
             <div class="index-category_container">
-                <h3>Category</h3>
+                <h3>Drum Set</h3>
                 <div class="index-category">
                     <a href="#" class="index-category_post">
                         <img src="/images/cymbals-bwc.jpg">
@@ -148,7 +121,7 @@
                 </div>
             </div>
             <div class="index-category_container">
-                <h3>Category</h3>
+                <h3>Technique</h3>
                 <div class="index-category">
                     <a href="#" class="index-category_post">
                         <img src="/images/cymbals-bwc.jpg">
@@ -170,11 +143,36 @@
                     </a>
                 </div>
             </div>
-        </div>
+            <div class="index-category_container">
+                <h3>Playing</h3>
+                <div class="index-category">
+                    <a href="#" class="index-category_post">
+                        <img src="/images/cymbals-bwc.jpg">
+                        <div>
+                            <h4>Article Title</h4>
+                            <p class="post-category">Category</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="index-category_post">
+                        <img src="/images/cymbals-bwc.jpg">
+                        <div>
+                            <h4>Article Title</h4>
+                            <p class="post-category">Category</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div> -->
 
-        <div class="btn-container">
-            <button class="btn-arrow btn-up"><i class="fa-solid fa-angle-up"></i></i></button>
-        </div>
+        <button class="btn-up">
+            <span>
+                <i class="fa-solid fa-angle-up"></i>
+            </span>
+        </button>
 
     </main>
 

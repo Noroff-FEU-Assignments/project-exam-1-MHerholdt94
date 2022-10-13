@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/c609dd8d17.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/qqa3pav.css">
     <link href="css/styles.css" rel="stylesheet">
+    <script defer src="js/bloglist.js"></script>
 </head>
 
 <body>
@@ -39,13 +40,60 @@
 
         <div class="breadcrumb">
             <div>
-                <a href="index.html">home</a>
-                <span>/ blog list</span>
+                <a href="index.html">Home</a>
+                <span>/ Blog List</span>
             </div>
         </div>
     </header>
 
     <main>
+        <div class="bloglist-top">
+            <div class="bloglist bloglist-newest">
+                <i class="fa-regular fa-clock"></i>
+                <h2>Newest</h2>
+                <div class="newest-container">
+                    <div class="loading"></div>
+                </div>
+            </div>
+            <div class="bloglist bloglist-featured">
+                <i class="fa-regular fa-star"></i>
+                <h2>Featured</h2>
+                <div class="featured-container">
+                    <div class="loading"></div>
+                </div>
+            </div>
+        </div>
+        <div class="seemore-container">
+            <button class="btn-seemore">View more<i class="fa-solid fa-angle-left"></i></button>
+        </div>
+        <div class="bloglist-bottom" hidden>
+            <div class="sort-container">
+                <div class="sort-category">
+                    <label for="categories">Sort by category:</label>
+                    <select id="categories">
+                        <option value="" disabled selected hidden>Select</option>
+                        <option value="article">Article</option>
+                        <option value="technique">Technique</option>
+                        <option value="playing">Playing</option>
+                        <option value="drumset">Drum set</option>
+                    </select>
+                </div>
+                <div class="sort-search">
+                    <label for="search">Search:</label>
+                    <input type="search" id="search-input" placeholder="Search blog post">
+                    <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            <div class="all-container">
+                <div class="loading"></div>
+            </div>
+        </div>
+
+        <button class="btn-up">
+            <span>
+                <i class="fa-solid fa-angle-up"></i>
+            </span>
+        </button>
 
     </main>
 
@@ -67,6 +115,7 @@
             </form>
         </div>
     </footer>
+
 </body>
 
 </html>
