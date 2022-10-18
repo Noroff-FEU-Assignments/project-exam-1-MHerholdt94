@@ -9,8 +9,8 @@
     <script src="https://kit.fontawesome.com/c609dd8d17.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/qqa3pav.css">
     <link href="css/styles.css" rel="stylesheet">
-    <script defer src="js/index.js"></script>
-    <script defer src="js/indextest.js"></script>
+    <script defer src="js/index.js" type="module"></script>
+    <script defer src="js/components/carousel.js"></script>
 </head>
 
 <body>
@@ -43,36 +43,30 @@
 
     <main>
 
-        <div class="carousel" data-carousel>
-            <button class="carousel-button prev" data-carousel-button="prev"><i
-                    class="fa-solid fa-angle-left"></i></button>
-            <button class="carousel-button next" data-carousel-button="next"><i
-                    class="fa-solid fa-angle-right"></i></button>
-            <ul class="slide-container" data-slides>
-                <li class="slide" data-active>
-                    <div class="slide-post">SLIDE 1</div>
-                    <div class="slide-post">SLIDE 2</div>
-                    <div class="slide-post">SLIDE 3</div>
-                </li>
-                <li class="slide">
-                    <div class="slide-post">SLIDE 4</div>
-                    <div class="slide-post">SLIDE 5</div>
-                    <div class="slide-post">SLIDE 6</div>
-                </li>
-                <li class="slide">
-                    <div class="slide-post">SLIDE 7</div>
-                    <div class="slide-post">SLIDE 8</div>
-                    <div class="slide-post">SLIDE 9</div>
-                </li>
-                <li class="slide">
-                    <div class="slide-post">SLIDE 10</div>
-                    <div class="slide-post">SLIDE 11</div>
-                    <div class="slide-post">SLIDE 12</div>
-                </li>
-            </ul>
+        <div class="carousel-container">
+            <button class="handle left-handle">
+                <div class="text">&#8249;</div>
+            </button>
+            <div class="carousel">
+                <div style="background-color:lightgreen;">1</div>
+                <div style="background-color:lightgreen;">2</div>
+                <div style="background-color:lightgreen;">3</div>
+                <div style="background-color:lightgreen;">4</div>
+                <div style="background-color:lightgreen;">5</div>
+                <div style="background-color:lightgreen;">6</div>
+                <div style="background-color:lightgreen;">7</div>
+                <div style="background-color:lightgreen;">8</div>
+                <div style="background-color:lightgreen;">9</div>
+                <div style="background-color:lightgreen;">10</div>
+                <div style="background-color:lightgreen;">11</div>
+                <div style="background-color:lightgreen;">12</div>
+            </div>
+            <button class="handle right-handle">
+                <div class="text">&#8250;</div>
+            </button>
         </div>
 
-        <div class="index-latest">
+        <!-- <div class="index-latest">
             <h2>Latest posts</h2>
             <div class="slider-container">
                 <button class="btn-left slider-btn"><i class="fa-solid fa-angle-left"></i></button>
@@ -81,7 +75,7 @@
                     <div class="loading"></div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="newsletter">
             <div class="newsletter-content">
@@ -101,102 +95,7 @@
             </div>
         </div>
 
-        <!-- <div class="index-categories">
-            <div class="index-category_container">
-                <h3>Article</h3>
-                <div class="index-category">
-                    <a href="#" class="index-category_post">
-                        <img src="/images/cymbals-bwc.jpg">
-                        <div>
-                            <h4>Article Title</h4>
-                            <p class="post-category">Category</p>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="index-category_post">
-                        <img src="/images/cymbals-bwc.jpg">
-                        <div>
-                            <h4>Article Title</h4>
-                            <p class="post-category">Category</p>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="index-category_container">
-                <h3>Drum Set</h3>
-                <div class="index-category">
-                    <a href="#" class="index-category_post">
-                        <img src="/images/cymbals-bwc.jpg">
-                        <div>
-                            <h4>Article Title</h4>
-                            <p class="post-category">Category</p>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="index-category_post">
-                        <img src="/images/cymbals-bwc.jpg">
-                        <div>
-                            <h4>Article Title</h4>
-                            <p class="post-category">Category</p>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="index-category_container">
-                <h3>Technique</h3>
-                <div class="index-category">
-                    <a href="#" class="index-category_post">
-                        <img src="/images/cymbals-bwc.jpg">
-                        <div>
-                            <h4>Article Title</h4>
-                            <p class="post-category">Category</p>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="index-category_post">
-                        <img src="/images/cymbals-bwc.jpg">
-                        <div>
-                            <h4>Article Title</h4>
-                            <p class="post-category">Category</p>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="index-category_container">
-                <h3>Playing</h3>
-                <div class="index-category">
-                    <a href="#" class="index-category_post">
-                        <img src="/images/cymbals-bwc.jpg">
-                        <div>
-                            <h4>Article Title</h4>
-                            <p class="post-category">Category</p>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
-                            </p>
-                        </div>
-                    </a>
-                    <a href="#" class="index-category_post">
-                        <img src="/images/cymbals-bwc.jpg">
-                        <div>
-                            <h4>Article Title</h4>
-                            <p class="post-category">Category</p>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div> -->
-
-        <button class="btn-up">
+        <button class="scroll-btn">
             <span>
                 <i class="fa-solid fa-angle-up"></i>
             </span>

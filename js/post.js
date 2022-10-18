@@ -1,3 +1,6 @@
+import { scrollTop } from "./components/scrollButton.js";
+scrollTop();
+
 const title = document.querySelector("#title");
 const container = document.querySelector(".post-container");
 const postCenter = document.querySelector(".post-center");

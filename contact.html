@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/c609dd8d17.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/qqa3pav.css">
     <link href="css/styles.css" rel="stylesheet">
+    <script defer src="js/contact.js" type="module"></script>
 </head>
 
 <body>
@@ -49,26 +50,36 @@
         <div class="contact-container">
             <div class="contact-form">
                 <h2>Send a message</h2>
-                <form>
+
+                <div id="validationMessage">
+                    <p>Thank you for contacting us!</p>
+                </div>
+
+                <form class="form-container" action="submit.php" method="POST">
+
                     <label for="fullName">Name</label>
                     <input type="text" name="fullName" id="fullName" placeholder="min 5 characters"
-                        class="contact-input contact-text" required>
-                    <p class="form-requirement" hidden>must be minimum 5 characters</p>
+                        class="contact-input contact-text">
+                    <div class="form-error" id="fullNameError"><i class="fa-solid fa-circle-exclamation"></i> must be
+                        minimum 5 characters</div>
 
                     <label for="email">E-mail</label>
                     <input type="text" name="email" id="email" placeholder="e-mail required"
-                        class="contact-input contact-text" required>
-                    <p class="form-requirement" hidden>must be a valid e-mail address</p>
+                        class="contact-input contact-text">
+                    <div class="form-error" id="emailError"><i class="fa-solid fa-circle-exclamation"></i> must be a
+                        valid e-mail address</div>
 
                     <label for="subject">Subject</label>
                     <input type="text" name="subject" id="subject" placeholder="min 15 characters"
-                        class="contact-input contact-text" required>
-                    <p class="form-requirement" hidden>must be minimum 15 characters</p>
+                        class="contact-input contact-text">
+                    <div class="form-error" id="subjectError"><i class="fa-solid fa-circle-exclamation"></i> must be
+                        minimum 15 characters</div>
 
                     <label for="message">Message</label>
                     <textarea name="message" id="message" placeholder="min 25 characters"
-                        class="contact-input contact-textarea" required></textarea>
-                    <p class="form-requirement" hidden>must be minimum 25 characters</p>
+                        class="contact-input contact-textarea"></textarea>
+                    <div class="form-error" id="messageError"><i class="fa-solid fa-circle-exclamation"></i> must be
+                        minimum 25 characters</div>
 
                     <input type="submit" name="submit" id="submit" class="btn-green">
                 </form>
@@ -76,7 +87,7 @@
             <img src="/images/smiling.jpg" alt="Person playing drums, smiling at camera" class="contact-img">
         </div>
 
-        <button class="btn-up">
+        <button class="scroll-btn">
             <span>
                 <i class="fa-solid fa-angle-up"></i>
             </span>

@@ -25,11 +25,16 @@
     --black: #000000;
     --black-shadow: #00000036;
     --black-transparent: #00000090;
+    --carousel-padding: 5rem;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -425,7 +430,7 @@ label {
     border-radius: 10px;
 }
 
-.btn-up {
+.scroll-btn {
     background-color: var(--dark-red);
     padding: 10px 12px;
     width: 42px;
@@ -436,19 +441,19 @@ label {
     float: right;
 }
 
-.btn-up i {
+.scroll-btn i {
     color: var(--white);
     font-size: 22px;
     vertical-align: middle;
 }
 
-.btn-up span {
+.scroll-btn span {
     display: inline-block;
     position: relative;
     transition: 0.3s;
 }
 
-.btn-up span:after {
+.scroll-btn span:after {
     content: "Scroll to top";
     font-size: 18px;
     position: absolute;
@@ -460,16 +465,16 @@ label {
     transition: 0.3s;
 }
 
-.btn-up:hover {
+.scroll-btn:hover {
     width: 142px;
     background-color: var(--red);
 }
 
-.btn-up:hover span {
+.scroll-btn:hover span {
     padding-left: 100px;
 }
 
-.btn-up:hover span:after {
+.scroll-btn:hover span:after {
     opacity: 1;
     right: 25px;
     width: 100px;
@@ -509,6 +514,25 @@ label {
     margin: 0 50px;
 }
 
+#validationMessage {
+    display: none;
+    background-color: var(--green);
+    color: var(--white);
+    font-weight: 100;
+    text-align: center;
+    border-radius: 10px;
+    width: 64%;
+    padding: 10px;
+    margin: 16px auto;
+}
+
+.form-error {
+    display: none;
+    color: var(--light-red);
+    margin-top: 2px;
+    padding-left: 4px;
+}
+
 .contact-input {
     background-color: var(--light-grey);
     border: 2px solid var(--light-grey);
@@ -524,6 +548,7 @@ label {
 }
 
 .contact-textarea {
+    font-family: "Articulat CF", sans-serif;
     height: 150px;
     padding: 8px;
     resize: none;
@@ -542,11 +567,6 @@ label {
 
 .contact-form label {
     margin-top: 30px;
-    padding-left: 4px;
-}
-
-.form-requirement {
-    color: var(--light-red);
     padding-left: 4px;
 }
 
@@ -986,59 +1006,71 @@ footer a:hover {
 }
 
 /* TESTING */
-.carousel {
-    width: 100%;
-    height: 500px;
-    position: relative;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-.carousel ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.slide {
+.carousel-container {
     display: flex;
-    gap: 16px;
-    position: absolute;
-    inset: 0;
-    opacity: 0;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.slide[data-active] {
-    opacity: 1;
+.carousel {
+    --carousel-index: 0;
+    display: flex;
+    flex-grow: 1;
+    transform: translateX(calc(var(--carousel-index) * 100%));
+    transition: transform 250ms ease-in-out;
 }
 
-.carousel-button {
-    position: absolute;
-    z-index: 2;
-    background: none;
+.carousel > div {
+    flex: 0 0 32.77%;
+    max-width: 32.77%;
+    aspect-ratio: 16/9;
+    margin: 0 .25rem 0 .25rem;
+    padding: .25rem;
+    border: 1px solid black;
+}
+
+.handle {
     border: none;
-    font-size: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    border-radius: .25rem;
+    flex-grow: 0;
+    background-color: rgba(0, 0, 0, .25);
+    z-index: 10;
     padding: 0 .5rem;
-    background-color: rgba(0, 0, 0, .1);
-}
-
-.carousel-button:hover,
-.carousel-button:focus {
+    margin: 0 .25rem;
+    cursor: pointer;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    background-color: rgba(0, 0, 0, .2);
+    line-height: 0;
+    transition: font-size 150ms ease-in-out;
+    transition: background-color 150ms ease-in-out;
 }
 
-.carousel-button:focus {
-    outline: 1px solid black;
+.left-handle {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
-.carousel-button.prev {
-    left: 1rem;
+.right-handle {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
-.carousel-button.next {
-    right: 1rem;
+.handle:hover,
+.handle:focus {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.text {
+    transition: transform 150ms ease-in-out;
+}
+
+.handle:hover .text,
+.handle:focus .text {
+    transform: scale(1.2);
 }
