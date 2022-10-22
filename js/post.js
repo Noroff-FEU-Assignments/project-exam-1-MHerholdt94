@@ -1,4 +1,6 @@
 import { scrollTop } from "./components/scrollButton.js";
+import "./components/newsletter.js";
+
 scrollTop();
 
 const title = document.querySelector("#title");

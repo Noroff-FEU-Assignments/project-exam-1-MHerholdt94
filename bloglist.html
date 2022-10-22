@@ -47,30 +47,22 @@
     </header>
 
     <main>
-        <div class="bloglist-top">
-            <div class="bloglist bloglist-newest">
-                <i class="fa-regular fa-clock"></i>
-                <h2>Newest</h2>
-                <div class="newest-container">
-                    <div class="loading"></div>
+
+        <div class="bloglist-container">
+
+            <div class="bloglist-sort">
+
+                <div class="bloglist-search">
+                    <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                    <input type="search" id="search-input" placeholder="Search blog post">
+                    <button class="btn-search"><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
-            </div>
-            <div class="bloglist bloglist-featured">
-                <i class="fa-regular fa-star"></i>
-                <h2>Featured</h2>
-                <div class="featured-container">
-                    <div class="loading"></div>
-                </div>
-            </div>
-        </div>
-        <div class="viewmore-container">
-            <button class="btn-view" id="viewMore">View more<i class="fa-solid fa-angle-down"></i></button>
-            <button class="btn-view" id="viewLess">View less<i class="fa-solid fa-angle-up"></i></button>
-        </div>
-        <div class="bloglist-bottom">
-            <div class="sort-container">
-                <div class="sort-category">
-                    <label for="categories">Sort by category:</label>
+
+                <button class="newest-btn bloglist-btn">Newest</button>
+                <button class="featured-btn bloglist-btn">Featured</button>
+
+                <div class="bloglist-categories">
+                    <label for="categories">Select category:</label>
                     <select id="categories">
                         <option value="" disabled selected hidden>Select</option>
                         <option value="article">Article</option>
@@ -79,15 +71,32 @@
                         <option value="drumset">Drum set</option>
                     </select>
                 </div>
-                <div class="sort-search">
-                    <label for="search">Search:</label>
-                    <input type="search" id="search-input" placeholder="Search blog post">
-                    <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+            </div>
+
+            <div class="bloglist bloglist-newest">
+                <i class="fa-regular fa-clock"></i>
+                <h2>Newest</h2>
+                <div class="newest-container">
+                    <div class="loading"></div>
+                </div>
+                <div class="rest-container">
+                    <div class="loading"></div>
+                </div>
+                <div class="view-container">
+                    <button class="btn-view" id="viewMore">View more<i class="fa-solid fa-angle-down"></i></button>
+                    <button class="btn-view" id="viewLess">View less<i class="fa-solid fa-angle-up"></i></button>
                 </div>
             </div>
-            <div class="all-container">
-                <div class="loading"></div>
+
+            <div class="bloglist bloglist-featured" hidden>
+                <i class="fa-regular fa-star"></i>
+                <h2>Featured</h2>
+                <div class="featured-container">
+                    <div class="loading"></div>
+                </div>
             </div>
+
         </div>
 
         <button class="scroll-btn">
@@ -99,21 +108,33 @@
     </main>
 
     <footer>
-        <div class="footer-left">
-            <h4>Contact us</h4>
-            <p class="footer-contact">Visit our <a href="contact.html">contact page</a> to send us a message</p>
-            <p>Or use one of the following methods:</p>
-            <p class="footer-phone">PHONE +47 123 45 678</p>
-            <p>EMAIL time@signature.com</p>
-        </div>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h4>Contact us</h4>
+                <p class="footer-contact">Visit our <a href="contact.html">contact page</a> to send us a message</p>
+                <p>Or use one of the following methods:</p>
+                <p class="footer-phone">PHONE +47 123 45 678</p>
+                <p>EMAIL time@signature.com</p>
+            </div>
 
-        <div class="newsletter-form">
-            <h4>Sign up for our newsletter</h4>
-            <form>
-                <label for="footeremail">E-mail</label>
-                <input type="email" name="footeremail" class="newsletter-email" required>
-                <input type="submit" class="btn-newsletter">
-            </form>
+            <div class="footer-right">
+                <h4>Sign up for our newsletter</h4>
+                <div>
+                    <form class="newsletter-form">
+                        <label for="newsemail">E-mail</label>
+                        <input type="email" name="newsemail" class="newsletter-email">
+                        <input type="submit" name="newsletterSubmit" class="btn-newsletter">
+                        <span class="newsletter-error newsletter-message"><i
+                                class="fa-solid fa-circle-exclamation"></i>valid
+                            e-mail required
+                        </span>
+                        <span class="newsletter-validation newsletter-message"><i
+                                class="fa-solid fa-circle-check"></i>thank
+                            you for
+                            signing up!</span>
+                    </form>
+                </div>
+            </div>
         </div>
     </footer>
 

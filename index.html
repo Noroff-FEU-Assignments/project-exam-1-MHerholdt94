@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/qqa3pav.css">
     <link href="css/styles.css" rel="stylesheet">
     <script defer src="js/index.js" type="module"></script>
-    <script defer src="js/components/carousel.js"></script>
 </head>
 
 <body>
@@ -47,18 +46,18 @@
         <div class="index-latest">
             <div class="carousel-container">
                 <div class="carousel">
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-                    <div>6</div>
-                    <div>7</div>
-                    <div>8</div>
-                    <div>9</div>
-                    <div>10</div>
-                    <div>11</div>
-                    <div>12</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
                 <div class="latest-nav">
                     <button class="carousel-btn prev">
@@ -72,35 +71,6 @@
             </div>
         </div>
 
-        <!-- <div class="index-latest">
-            <h2>Latest posts</h2>
-            <div class="slider-container">
-                <button class="btn-left slider-btn"><i class="fa-solid fa-angle-left"></i></button>
-                <button class="btn-right slider-btn"><i class="fa-solid fa-angle-right"></i></button>
-                <div class="slider-posts">
-                    <div class="loading"></div>
-                </div>
-            </div>
-        </div> -->
-
-        <div class="newsletter">
-            <div class="newsletter-content">
-                <div class="newsletter-left">
-                    <h2>Sign up for our newsletter!</h2>
-                    <p>Get a head start on everything new in the world of drumming by signing up for our weekly
-                        newsletter.
-                        It's free!</p>
-                </div>
-                <div class="newsletter-form newsletter-right">
-                    <form>
-                        <label for="newsemail">E-mail</label>
-                        <input type="email" id="newsemail" name="newsemail" class="newsletter-email" required>
-                        <input type="submit" class="btn-newsletter">
-                    </form>
-                </div>
-            </div>
-        </div>
-
         <button class="scroll-btn">
             <span>
                 <i class="fa-solid fa-angle-up"></i>
@@ -110,21 +80,33 @@
     </main>
 
     <footer>
-        <div class="footer-left">
-            <h4>Contact us</h4>
-            <p class="footer-contact">Visit our <a href="contact.html">contact page</a> to send us a message</p>
-            <p>Or use one of the following methods:</p>
-            <p class="footer-phone">PHONE +47 123 45 678</p>
-            <p>EMAIL time@signature.com</p>
-        </div>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h4>Contact us</h4>
+                <p class="footer-contact">Visit our <a href="contact.html">contact page</a> to send us a message</p>
+                <p>Or use one of the following methods:</p>
+                <p class="footer-phone">PHONE +47 123 45 678</p>
+                <p>EMAIL time@signature.com</p>
+            </div>
 
-        <div class="newsletter-form">
-            <h4>Sign up for our newsletter</h4>
-            <form>
-                <label for="footeremail">E-mail</label>
-                <input type="email" name="footeremail" class="newsletter-email" required>
-                <input type="submit" class="btn-newsletter">
-            </form>
+            <div class="footer-right">
+                <h4>Sign up for our newsletter</h4>
+                <div>
+                    <form class="newsletter-form">
+                        <label for="newsemail">E-mail</label>
+                        <input type="email" name="newsemail" class="newsletter-email">
+                        <input type="submit" name="newsletterSubmit" class="btn-newsletter">
+                        <span class="newsletter-error newsletter-message"><i
+                                class="fa-solid fa-circle-exclamation"></i>valid
+                            e-mail required
+                        </span>
+                        <span class="newsletter-validation newsletter-message"><i
+                                class="fa-solid fa-circle-check"></i>thank
+                            you for
+                            signing up!</span>
+                    </form>
+                </div>
+            </div>
         </div>
     </footer>
 

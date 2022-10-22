@@ -51,7 +51,7 @@
             <div class="contact-form">
                 <h2>Send a message</h2>
 
-                <div id="validationMessage">
+                <div class="contact-validation validation" id="validationMessage">
                     <p>Thank you for contacting us!</p>
                 </div>
 
@@ -96,21 +96,33 @@
     </main>
 
     <footer>
-        <div class="footer-left">
-            <h4>Contact us</h4>
-            <p class="footer-contact">Visit our <a href="contact.html">contact page</a> to send us a message</p>
-            <p>Or use one of the following methods:</p>
-            <p class="footer-phone">PHONE +47 123 45 678</p>
-            <p>EMAIL time@signature.com</p>
-        </div>
+        <div class="footer-content">
+            <div class="footer-left">
+                <h4>Contact us</h4>
+                <p class="footer-contact">Visit our <a href="contact.html">contact page</a> to send us a message</p>
+                <p>Or use one of the following methods:</p>
+                <p class="footer-phone">PHONE +47 123 45 678</p>
+                <p>EMAIL time@signature.com</p>
+            </div>
 
-        <div class="newsletter-form">
-            <h4>Sign up for our newsletter</h4>
-            <form>
-                <label for="footeremail">E-mail</label>
-                <input type="email" name="footeremail" class="newsletter-email" required>
-                <input type="submit" class="btn-newsletter">
-            </form>
+            <div class="footer-right">
+                <h4>Sign up for our newsletter</h4>
+                <div>
+                    <form class="newsletter-form">
+                        <label for="newsemail">E-mail</label>
+                        <input type="email" name="newsemail" class="newsletter-email">
+                        <input type="submit" name="newsletterSubmit" class="btn-newsletter">
+                        <span class="newsletter-error newsletter-message"><i
+                                class="fa-solid fa-circle-exclamation"></i>valid
+                            e-mail required
+                        </span>
+                        <span class="newsletter-validation newsletter-message"><i
+                                class="fa-solid fa-circle-check"></i>thank
+                            you for
+                            signing up!</span>
+                    </form>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
