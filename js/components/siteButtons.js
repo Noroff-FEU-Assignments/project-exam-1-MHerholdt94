@@ -5,3 +5,9 @@ export function scrollTop() {
     document.documentElement.scrollTop = 0;
   };
 }
+
+export function goBack() {
+  document.querySelector(".back-btn").addEventListener("click", () => {
+    history.back();
+  });
+}

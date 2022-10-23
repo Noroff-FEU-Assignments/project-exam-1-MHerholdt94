@@ -46,16 +46,22 @@
         </div>
     </header>
 
-    <main>
+    <button class="back-btn">
+        <span>
+            <i class="fa-solid fa-angle-left"></i>
+        </span>
+    </button>
 
+    <main>
         <div class="bloglist-container">
 
             <div class="bloglist-sort">
 
                 <div class="bloglist-search">
-                    <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                    <input type="search" id="search-input" placeholder="Search blog post">
-                    <button class="btn-search"><i class="fa-solid fa-chevron-right"></i></button>
+                    <label for="search" style="cursor:not-allowed;"><i class="fa-solid fa-magnifying-glass"></i></label>
+                    <input type="search" id="search-input" placeholder="Search blog post" style="cursor:not-allowed;">
+                    <button class="btn-search" style="cursor:not-allowed;"><i
+                            class="fa-solid fa-chevron-right"></i></button>
                 </div>
 
                 <div class="bloglist-sort_bottom">
@@ -65,13 +71,14 @@
 
                     <div class="bloglist-categories">
                         <label for="categories">Select category:</label>
-                        <select id="categories">
+                        <select id="categories" style="cursor:not-allowed;" disabled>
                             <option value="" disabled selected hidden>Select</option>
                             <option value="article">Article</option>
                             <option value="technique">Technique</option>
                             <option value="playing">Playing</option>
                             <option value="drumset">Drum set</option>
                         </select>
+                        <p class="wip">WORK IN PROGRESS</p>
                     </div>
                 </div>
 
@@ -107,7 +114,6 @@
                 <i class="fa-solid fa-angle-up"></i>
             </span>
         </button>
-
     </main>
 
     <footer>

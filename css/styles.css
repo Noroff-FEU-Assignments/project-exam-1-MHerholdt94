@@ -287,6 +287,54 @@ label {
     cursor: pointer;
 }
 
+.back-btn {
+    position: sticky;
+    top: 40px;
+    background-color: var(--dark-red);
+    padding: 8px 24px;
+    margin: 16px 50px 0 80px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.back-btn i {
+    color: var(--white);
+    font-size: 22px;
+    vertical-align: middle;
+}
+
+.back-btn span {
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+.back-btn span:before {
+    content: "Back";
+    font-size: 18px;
+    position: absolute;
+    color: var(--white);
+    opacity: 0;
+    top: 2px;
+    left: 60px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background-color: var(--red);
+}
+
+.back-btn:hover span {
+    padding-right: 40px;
+}
+
+.back-btn:hover span:before {
+    opacity: 1;
+    left: 20px;
+}
+
 .scroll-btn {
     background-color: var(--dark-red);
     padding: 10px 12px;
@@ -319,6 +367,7 @@ label {
     opacity: 0;
     top: 2px;
     right: 60px;
+    pointer-events: none;
     transition: 0.3s;
 }
 
@@ -473,7 +522,6 @@ label {
 }
 
 /* CONTACT PAGE */
-
 .contact-center {
     background: -webkit-linear-gradient(left, 
     rgba(0,0,0,1) 0%, 
@@ -662,7 +710,6 @@ label {
     top: 32px;
 }
 
-
 /* BLOG LIST PAGE */
 .bloglist-center {
     background: -webkit-linear-gradient(left, 
@@ -717,16 +764,16 @@ label {
     background-color: var(--light-grey);
 }
 
-.bloglist-search button {
+.btn-search {
     outline: none;
     border: none;
     border-radius: 0 5px 5px 0;
 }
 
-.bloglist-search button:hover {
+/* .btn-search:hover {
     background-color: var(--dark-grey);
     color: var(--white);
-}
+} */
 
 .bloglist-sort_bottom {
     box-shadow: 2px 3px 5px var(--black-shadow);
@@ -858,7 +905,6 @@ label {
 }
 
 /* BLOG POST PAGE */
-
 .header-img_post h1 {
     margin-top: 220px;
 }
@@ -990,7 +1036,6 @@ td:first-child {
 }
 
 /* FOOTER */
-
 footer {
     background-color: var(--dark-grey);
     padding: 70px 0 90px 0;
@@ -1027,4 +1072,12 @@ footer a:hover {
 
 .footer-right div {
     margin-top: 12px;
+}
+
+/* WORK IN PROGRESS */
+
+.wip {
+    background-color: var(--red);
+    padding: 8px 6px 6px 6px;
+    margin-top: 16px;
 }

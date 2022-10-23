@@ -1,6 +1,7 @@
-import { scrollTop } from "./components/scrollButton.js";
+import { scrollTop, goBack } from "./components/siteButtons.js";
 import "./components/newsletter.js";
 
+goBack();
 scrollTop();
 
 // contact form container

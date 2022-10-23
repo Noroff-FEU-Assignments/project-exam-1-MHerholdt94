@@ -1,8 +1,9 @@
-import { scrollTop } from "./components/scrollButton.js";
+import { scrollTop, goBack } from "./components/SiteButtons.js";
 import { baseUrl, blogPosts } from "./components/fetchApi.js";
 import "./components/newsletter.js";
 
 blogPosts(baseUrl);
+goBack();
 scrollTop();
 
 // Bloglist page buttons
