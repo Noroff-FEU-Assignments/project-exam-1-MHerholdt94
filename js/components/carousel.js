@@ -78,6 +78,16 @@ function calculateProgressBar(progressBar) {
       barItem.classList.add("active");
     }
 
+    if (i === 0) {
+      barItem.classList.add("progress-zero");
+    } else if (i === 1) {
+      barItem.classList.add("progress-one");
+    } else if (i === 2) {
+      barItem.classList.add("progress-two");
+    } else if (i === 3) {
+      barItem.classList.add("progress-three");
+    }
+
     progressBar.append(barItem);
   }
 }

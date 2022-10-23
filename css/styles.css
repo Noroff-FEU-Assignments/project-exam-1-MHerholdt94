@@ -1,5 +1,4 @@
 /* GLOBAL STYLES */
-
 :root {
     --blue: #0000FF;
     --light-red: #FF4D52;
@@ -48,7 +47,6 @@ main {
 
 h1, h2, h3, h4 {
     font-family: "Timonium", sans-serif;
-    font-style: italic;
 }
 
 h1 {
@@ -240,7 +238,6 @@ label {
 }
 
 /* BUTTONS/CTA */
-
 .cta {
     padding: 15px 20px;
     border-radius: 10px;
@@ -341,7 +338,6 @@ label {
 }
 
 /* HOME PAGE */
-
 .index-center {
     background: -webkit-linear-gradient(left, 
     rgba(0,0,0,1) 0%, 
@@ -366,6 +362,7 @@ label {
     overflow: hidden;
     border-top: 4px solid var(--red);
     padding-top: 50px;
+    width: 1524px;
 }
 
 .carousel {
@@ -378,10 +375,10 @@ label {
 }
 
 .carousel > a {
-    max-width: 499.1px;
-    min-width: 499.1px;
+    max-width: 500px;
+    min-width: 500px;
     margin: 0 4px;
-    box-shadow: 2px 3px 5px var(--black-shadow);
+    box-shadow: 0 2px 4px var(--black-shadow);
     border-radius: 10px;
 }
 
@@ -429,6 +426,7 @@ label {
     min-width: 24px;
     height: 8px;
     background-color: var(--red-transparent);
+    cursor: pointer;
 }
 
 .progress-item.active {
@@ -471,7 +469,7 @@ label {
 }
 
 .carousel-excerpt {
-    width: 80%;
+    width: 90%;
 }
 
 /* CONTACT PAGE */
@@ -694,22 +692,23 @@ label {
 
 .bloglist-sort {
     float: left;
-    background-color: var(--red);
     margin-right: 8px;
     height: 250px;
     text-align: center;
-    box-shadow: 2px 3px 5px var(--black-shadow);
+    border-radius: 5px;
 }
 
 .bloglist-search {
     display: grid;
     grid-template-columns: 15% 67% 18%;
+    border-radius: 5px;
 }
 
 .bloglist-search label {
     color: var(--dark-grey);
     background-color: var(--light-grey);
     padding: 8px 0;
+    border-radius: 5px 0 0 5px;
 }
 
 .bloglist-search input {
@@ -721,11 +720,20 @@ label {
 .bloglist-search button {
     outline: none;
     border: none;
+    border-radius: 0 5px 5px 0;
 }
 
 .bloglist-search button:hover {
     background-color: var(--dark-grey);
     color: var(--white);
+}
+
+.bloglist-sort_bottom {
+    box-shadow: 2px 3px 5px var(--black-shadow);
+    background-color: var(--dark-grey);
+    margin-top: 8px;
+    padding-bottom: 24px;
+    border-radius: 5px;
 }
 
 .bloglist-btn {
@@ -734,11 +742,15 @@ label {
     height: 56px;
     border: none;
     outline: none;
-    border-bottom: 2px solid var(--dark-red);
+    border-bottom: 2px solid var(--grey);
     font-size: 1rem;
-    background-color: var(--red);
+    background-color: var(--dark-grey);
     color: var(--white);
     font-weight: 600;
+}
+
+.bloglist-btn:first-child {
+    border-radius: 5px 5px 0 0;
 }
 
 .bloglist-btn:hover {
