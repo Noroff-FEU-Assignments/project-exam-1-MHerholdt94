@@ -18,7 +18,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 const url =
-  "http://devholdt.no/timesignature/wp-json/wp/v2/posts/" + id + "?_embed";
+  "https://devholdt.no/timesignature/wp-json/wp/v2/posts/" + id + "?_embed";
 
 async function postContent() {
   try {
