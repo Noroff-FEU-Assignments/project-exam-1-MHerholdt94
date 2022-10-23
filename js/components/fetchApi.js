@@ -1,6 +1,6 @@
 // Base URL
 export const baseUrl =
-  "https://devholdt.no/timesignature/wp-json/wp/v2/posts?_embed&per_page=12";
+  "http://devholdt.no/timesignature/wp-json/wp/v2/posts?_embed&per_page=12";
 
 // Blog posts general
 const carouselClass = document.getElementsByClassName("carousel");
