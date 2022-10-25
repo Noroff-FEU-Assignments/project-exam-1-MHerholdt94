@@ -10,6 +10,8 @@ const progressZero = document.querySelector(".progress-zero");
 const progressOne = document.querySelector(".progress-one");
 const progressTwo = document.querySelector(".progress-two");
 const progressThree = document.querySelector(".progress-three");
+const progressFour = document.querySelector(".progress-four");
+const progressFive = document.querySelector(".progress-five");
 
 const progressCarousel = document.querySelector(".carousel");
 
@@ -27,6 +29,8 @@ progressOne.onclick = function () {
   progressOne.classList.add("active");
   progressTwo.classList.remove("active");
   progressThree.classList.remove("active");
+  progressFour.classList.remove("active");
+  progressFive.classList.remove("active");
 };
 
 progressTwo.onclick = function () {
@@ -35,6 +39,8 @@ progressTwo.onclick = function () {
   progressOne.classList.remove("active");
   progressTwo.classList.add("active");
   progressThree.classList.remove("active");
+  progressFour.classList.remove("active");
+  progressFive.classList.remove("active");
 };
 
 progressThree.onclick = function () {
@@ -43,4 +49,26 @@ progressThree.onclick = function () {
   progressOne.classList.remove("active");
   progressTwo.classList.remove("active");
   progressThree.classList.add("active");
+  progressFour.classList.remove("active");
+  progressFive.classList.remove("active");
+};
+
+progressFour.onclick = function () {
+  progressCarousel.style = "--carousel-index:3;";
+  progressZero.classList.remove("active");
+  progressOne.classList.remove("active");
+  progressTwo.classList.remove("active");
+  progressThree.classList.remove("active");
+  progressFour.classList.add("active");
+  progressFive.classList.remove("active");
+};
+
+progressFive.onclick = function () {
+  progressCarousel.style = "--carousel-index:3;";
+  progressZero.classList.remove("active");
+  progressOne.classList.remove("active");
+  progressTwo.classList.remove("active");
+  progressThree.classList.remove("active");
+  progressFour.classList.remove("active");
+  progressFive.classList.add("active");
 };

@@ -87,10 +87,10 @@
             <div class="bloglist bloglist-newest">
                 <i class="fa-regular fa-clock"></i>
                 <h2>Newest</h2>
-                <div class="newest-container">
+                <div class="blogposts newest-container">
                     <div class="loading"></div>
                 </div>
-                <div class="rest-container">
+                <div class="blogposts rest-container">
                     <div class="loading"></div>
                 </div>
                 <div class="view-container">
@@ -102,19 +102,20 @@
             <div class="bloglist bloglist-featured" hidden>
                 <i class="fa-regular fa-star"></i>
                 <h2>Featured</h2>
-                <div class="featured-container">
+                <div class="blogposts featured-container">
                     <div class="loading"></div>
                 </div>
             </div>
 
         </div>
 
-        <button class="scroll-btn">
-            <span>
-                <i class="fa-solid fa-angle-up"></i>
-            </span>
-        </button>
     </main>
+
+    <button class="scroll-btn">
+        <span>
+            <i class="fa-solid fa-angle-up"></i>
+        </span>
+    </button>
 
     <footer>
         <div class="footer-content">
@@ -133,14 +134,12 @@
                         <label for="newsemail">E-mail</label>
                         <input type="email" name="newsemail" class="newsletter-email">
                         <input type="submit" name="newsletterSubmit" class="btn-newsletter">
-                        <span class="newsletter-error newsletter-message"><i
-                                class="fa-solid fa-circle-exclamation"></i>valid
-                            e-mail required
+                        <span class="newsletter-error newsletter-message">
+                            <i class="fa-solid fa-circle-exclamation"></i>valid e-mail required
                         </span>
-                        <span class="newsletter-validation newsletter-message"><i
-                                class="fa-solid fa-circle-check"></i>thank
-                            you for
-                            signing up!</span>
+                        <span class="newsletter-validation newsletter-message">
+                            <i class="fa-solid fa-circle-check"></i>thank you for signing up!
+                        </span>
                     </form>
                 </div>
             </div>

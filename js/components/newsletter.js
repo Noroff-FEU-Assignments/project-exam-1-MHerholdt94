@@ -3,11 +3,18 @@ const newsletterError = document.querySelector(".newsletter-error");
 const newsletterValidation = document.querySelector(".newsletter-validation");
 const email = document.querySelector(".newsletter-email");
 
+const windowWidth = window.matchMedia("(max-width: 1580px)");
+
 function formValidation(event) {
   event.preventDefault();
 
   if (validEmail(email.value) === true) {
-    newsletterValidation.style.display = "inline";
+    if (windowWidth.matches) {
+      newsletterValidation.style.display = "block";
+    } else {
+      newsletterValidation.style.display = "inline";
+    }
+
     newsletterError.style.display = "none";
 
     setTimeout(function () {
@@ -16,8 +23,13 @@ function formValidation(event) {
 
     newsletterForm.reset();
   } else {
+    if (windowWidth.matches) {
+      newsletterError.style.display = "block";
+    } else {
+      newsletterError.style.display = "inline";
+    }
+
     newsletterValidation.style.display = "none";
-    newsletterError.style.display = "inline";
 
     setTimeout(function () {
       newsletterError.style.display = "none";
