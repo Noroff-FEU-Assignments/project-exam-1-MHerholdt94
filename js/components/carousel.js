@@ -86,45 +86,8 @@ function calculateProgressBar(progressBar) {
       barItem.classList.add("progress-two");
     } else if (i === 3) {
       barItem.classList.add("progress-three");
-    } else if (i === 4) {
-      barItem.classList.add("progress-four");
-    } else if (i === 5) {
-      barItem.classList.add("progress-five");
     }
 
     progressBar.append(barItem);
   }
 }
-
-// Throttle (unsure if needed)
-
-// const throttleProgressBar = throttle(() => {
-//   document.querySelectorAll(".progress-bar").forEach(calculateProgressBar);
-// }, 250);
-
-// window.addEventListener("resize", throttleProgressBar);
-
-// function throttle(cb, delay = 1000) {
-//   let shouldWait = false;
-//   let waitingArgs;
-//   const timeoutFunc = () => {
-//     if (waitingArgs == null) {
-//       shouldWait = false;
-//     } else {
-//       cb(...waitingArgs);
-//       waitingArgs = null;
-//       setTimeout(timeoutFunc, delay);
-//     }
-//   };
-
-//   return (...args) => {
-//     if (shouldWait) {
-//       waitingArgs = args;
-//       return;
-//     }
-
-//     cb(...args);
-//     shouldWait = true;
-//     setTimeout(timeoutFunc, delay);
-//   };
-// }

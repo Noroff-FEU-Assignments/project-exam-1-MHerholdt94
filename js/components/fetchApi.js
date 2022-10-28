@@ -15,10 +15,13 @@ export async function blogPosts(url) {
     const response = await fetch(url);
     const posts = await response.json();
 
+    // HOME PAGE
     if (carouselExists) {
       const carouselContainer = document.querySelector(".carousel");
+      const indexMobile = document.querySelector(".index-latest_mobile");
 
       carouselContainer.innerHTML = "";
+      indexMobile.innerHTML = "";
 
       for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
@@ -30,9 +33,20 @@ export async function blogPosts(url) {
                                                 <div class="carousel-excerpt">${post.excerpt.rendered}</div>
                                             </div>
                                         </a>`;
+
+        if (i <= 3) {
+          indexMobile.innerHTML += `<a href="blog.html?id=${post.id}" class="index-mobile_post" style="background-image: url(${post._embedded["wp:featuredmedia"]["0"].source_url});">
+                                    <div class="index-mobile_details">
+                                      <h3>${post.title.rendered}</h3>
+                                      <p class="post-category">${post._embedded["wp:term"]["0"]["0"].name}</p>
+                                      <div class="index-mobile_excerpt">${post.excerpt.rendered}</div>
+                                    </div>
+                                  </a>`;
+        }
       }
     }
 
+    // BLOG LIST PAGE
     if (bloglistExists) {
       const newestContainer = document.querySelector(".newest-container");
       const featuredContainer = document.querySelector(".featured-container");

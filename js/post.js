@@ -1,5 +1,6 @@
 import { scrollTop, goBack } from "./components/siteButtons.js";
 import "./components/newsletter.js";
+// import { dateFormat } from "./components/date.js";
 
 goBack();
 scrollTop();
@@ -23,14 +24,33 @@ const url =
 async function postContent() {
   try {
     const response = await fetch(url);
-
     const post = await response.json();
+
+    const date = new Date(post.date);
+    const day = date.getDate();
+    const monthNames = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    const month = monthNames[date.getMonth()];
+    const year = date.getFullYear();
+    const postDate = day + ". " + month + " " + year;
 
     title.innerHTML = `TIME/SIGNATURE | ${post.title.rendered}`;
     breadcrumb.innerHTML = `/ ${post.title.rendered}`;
     postHeader.innerHTML = `${post.title.rendered}`;
     postSub.innerHTML = `<span class="header-author">Mathias B. Herholdt</span>
-                        <span class="header-date">${post.date}</span>
+                        <span class="header-date">${postDate}</span>
                         <span class="header-category">${post._embedded["wp:term"]["0"]["0"].name}</span>`;
 
     postCenter.style.background = `-webkit-linear-gradient(left,
