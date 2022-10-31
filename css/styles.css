@@ -373,7 +373,7 @@ label {
     border: none;
     border-radius: 5px;
     transition: all 0.3s;
-    margin: 50px 32px;
+    margin: 32px;
     position: absolute;
     right: 0;
 }
@@ -1482,10 +1482,6 @@ footer a {
         margin: 0 0 8px 0;
         padding: 14px 56px 14px 8px;
         top: 169px;
-    }
-
-    .scroll-btn {
-        margin: 32px;
     }
 
     .latest-mobile_container {
