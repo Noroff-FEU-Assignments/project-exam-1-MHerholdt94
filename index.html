@@ -14,37 +14,56 @@
 
 <body>
     <header>
-        <div class="header-sticky">
-            <div class="header-top">
-                <a href="index.html">
-                    <img src="/images/logo_white_shadow.png" class="header-logo">
-                </a>
-            </div>
-
-            <div class="header-nav">
-                <a href="index.html">HOME</a>
-                <a href="bloglist.html">BLOG</a>
-                <a href="about.html">ABOUT</a>
-                <a href="contact.html">CONTACT</a>
-            </div>
+        <div class="header-top">
+            <a href="index.html">
+                <img src="/images/logo_white_shadow.png" class="header-logo">
+            </a>
         </div>
 
+        <div class="header-nav">
+            <a href="index.html">Home</a>
+            <a href="bloglist.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="mobile-nav">
+            <div class="mobile-header">
+                <a href="index.html">Time/Signature</a>
+            </div>
+
+            <div id="hamburgerMenu">
+                <a href="index.html">Home</a>
+                <a href="bloglist.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <button class="hamburger-btn">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="header-section">
         <div class="header-img">
             <div class="header-black"></div>
             <div class="index-center">
                 <div class="header-title">
-                    <h1>Welcome to Time/Signature!</h1>
+                    <h1>Welcome to Time<span>/</span><br>Signature!</h1>
                     <p>The #1 blog on all things dumming and rhythm.</p>
                 </div>
             </div>
             <div class="header-black"></div>
         </div>
-    </header>
+    </section>
 
     <main>
-        <h2>Latest posts</h2>
-        <div class="index-latest_mobile"></div>
-        <a href="bloglist.html" class="index-latest_link">All posts<i class="fa-solid fa-chevron-right"></i></a>
+        <h2 class="index-h2">Latest posts</h2>
+        <div class="latest-mobile_container">
+            <div class="latest-mobile_posts"></div>
+            <a href="bloglist.html" class="latest-mobile_link">All posts<i class="fa-solid fa-chevron-right"></i></a>
+        </div>
         <div class="index-latest">
             <div class="carousel-container">
                 <div class="carousel">

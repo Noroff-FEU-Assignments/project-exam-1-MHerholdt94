@@ -1,7 +1,8 @@
-import { scrollTop, goBack } from "./components/siteButtons.js";
+import { scrollTop, goBack, hamburgerMenu } from "./components/siteButtons.js";
 import "./components/newsletter.js";
 // import { dateFormat } from "./components/date.js";
 
+hamburgerMenu();
 goBack();
 scrollTop();
 

@@ -1,6 +1,7 @@
-import { scrollTop, goBack } from "./components/siteButtons.js";
+import { scrollTop, goBack, hamburgerMenu } from "./components/siteButtons.js";
 import "./components/newsletter.js";
 
+hamburgerMenu();
 goBack();
 scrollTop();
 

@@ -14,7 +14,6 @@
 
 <body>
     <header>
-
         <div class="header-top">
             <a href="index.html">
                 <img src="/images/logo_white_shadow.png" class="header-logo">
@@ -22,13 +21,31 @@
         </div>
 
         <div class="header-nav">
-            <a href="index.html">HOME</a>
-            <a href="bloglist.html">BLOG</a>
-            <a href="about.html">ABOUT</a>
-            <a href="contact.html">CONTACT</a>
+            <a href="index.html">Home</a>
+            <a href="bloglist.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </div>
 
+        <div class="mobile-nav">
+            <div class="mobile-header">
+                <a href="index.html">Time/Signature</a>
+            </div>
 
+            <div id="hamburgerMenu">
+                <a href="index.html">Home</a>
+                <a href="bloglist.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <button class="hamburger-btn">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="header-section">
         <div class="header-img">
             <div class="header-black"></div>
             <div class="contact-center header-img_small">
@@ -45,8 +62,7 @@
                 <span>/ Contact Us</span>
             </div>
         </div>
-
-    </header>
+    </section>
 
     <button class="back-btn">
         <span>
@@ -94,6 +110,23 @@
                 </form>
             </div>
             <img src="/images/smiling.jpg" alt="Person playing drums, smiling at camera" class="contact-img">
+        </div>
+
+        <div class="newsletter-mobile_container">
+            <h4>Sign up for our newsletter!</h4>
+            <div>
+                <form class="newsletter-form">
+                    <label for="newsemail">E-mail</label>
+                    <input type="email" name="newsemail" class="newsletter-email">
+                    <input type="submit" name="newsletterSubmit" class="btn-newsletter">
+                    <span class="newsletter-error newsletter-message">
+                        <i class="fa-solid fa-circle-exclamation"></i>valid e-mail required
+                    </span>
+                    <span class="newsletter-validation newsletter-message">
+                        <i class="fa-solid fa-circle-check"></i>thank you for signing up!
+                    </span>
+                </form>
+            </div>
         </div>
 
     </main>

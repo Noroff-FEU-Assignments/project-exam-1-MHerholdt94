@@ -18,7 +18,7 @@ export async function blogPosts(url) {
     // HOME PAGE
     if (carouselExists) {
       const carouselContainer = document.querySelector(".carousel");
-      const indexMobile = document.querySelector(".index-latest_mobile");
+      const indexMobile = document.querySelector(".latest-mobile_posts");
 
       carouselContainer.innerHTML = "";
       indexMobile.innerHTML = "";

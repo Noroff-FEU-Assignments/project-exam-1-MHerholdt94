@@ -21,13 +21,31 @@
         </div>
 
         <div class="header-nav">
-            <a href="index.html">HOME</a>
-            <a href="bloglist.html">BLOG</a>
-            <a href="about.html">ABOUT</a>
-            <a href="contact.html">CONTACT</a>
+            <a href="index.html">Home</a>
+            <a href="bloglist.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </div>
 
+        <div class="mobile-nav">
+            <div class="mobile-header">
+                <a href="index.html">Time/Signature</a>
+            </div>
 
+            <div id="hamburgerMenu">
+                <a href="index.html">Home</a>
+                <a href="bloglist.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <button class="hamburger-btn">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="header-section">
         <div class="header-img">
             <div class="header-black"></div>
             <div class="about-center header-img_small">
@@ -44,7 +62,7 @@
                 <span>/ About Us</span>
             </div>
         </div>
-    </header>
+    </section>
 
     <button class="back-btn">
         <span>
@@ -53,7 +71,7 @@
     </button>
 
     <main>
-        <div class="about-container">
+        <div class="who-container about-container">
             <div class="about-text">
                 <h2>Who are we?</h2>
                 <h5>About Time/Signature</h5>
@@ -79,13 +97,15 @@
                     dolores
                     et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </p>
-                <a href="contact.html" class="cta btn-green about-btn">Contact us</a>
+                <div class="about-btn">
+                    <a href="contact.html" class="cta btn-green about-btn">Contact us</a>
+                </div>
             </div>
             <div class="about-img">
                 <img src="/images/silhouete-and-singing.jpg">
             </div>
         </div>
-        <div class="lessons-container">
+        <div class="lessons-container about-container">
             <div class="lessons-header">
                 <h3>Lessons by Time/Signature</h3>
                 <img src="/images/cymbals-bwc.jpg" alt="Drum Kit">
@@ -107,7 +127,9 @@
                         dolores
                         et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                     </p>
-                    <a href="bloglist.html" class="cta btn-red about-btn">Learn more</a>
+                    <div class="about-btn">
+                        <a href="bloglist.html" class="cta btn-red">Learn more</a>
+                    </div>
                 </div>
                 <img src="/images/snare.jpg" alt="">
             </div>
