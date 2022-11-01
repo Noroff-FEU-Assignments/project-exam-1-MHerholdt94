@@ -35,7 +35,7 @@
     <header>
         <div class="header-top">
             <a href="index.html">
-                <img src="/images/logo_white_shadow.png" class="header-logo">
+                <img src="/images/logo_white_shadow.png" alt="Timesignature Logo" class="header-logo">
             </a>
         </div>
 
@@ -58,7 +58,7 @@
                 <a href="contact.html">Contact</a>
             </div>
 
-            <button class="hamburger-btn">
+            <button class="hamburger-btn" aria-label="hamburger menu">
                 <i class="fa fa-bars"></i>
             </button>
         </div>
@@ -76,7 +76,7 @@
         </div>
 
         <div class="small-nav">
-            <button class="back-btn">
+            <button class="back-btn" aria-label="Back">
                 <span>
                     <i class="fa-solid fa-angle-left"></i>
                 </span>
@@ -120,7 +120,8 @@
                 </div>
             </div>
             <div class="about-img">
-                <img src="/images/silhouete-and-singing.jpg">
+                <img src="/images/silhouete-and-singing.jpg"
+                    alt="A silhouette of a person playing drums and another person singing">
             </div>
         </div>
         <div class="lessons-container about-container">
@@ -146,16 +147,16 @@
                         et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                     </p>
                     <div class="about-btn">
-                        <a href="bloglist.html" class="cta btn-red">Learn more</a>
+                        <a href="bloglist.html" class="cta btn-red">Browse blog</a>
                     </div>
                 </div>
-                <img src="/images/snare.jpg" alt="">
+                <img src="/images/snare.jpg" alt="A snare drum with a pair of drum sticks">
             </div>
         </div>
 
     </main>
 
-    <button class="scroll-btn">
+    <button class="scroll-btn" aria-label="Scroll to top">
         <span>
             <i class="fa-solid fa-angle-up"></i>
         </span>
@@ -175,8 +176,9 @@
                 <h4>Sign up for our newsletter</h4>
                 <div>
                     <form class="newsletter-form">
-                        <label for="newsemail">E-mail</label>
-                        <input type="email" name="newsemail" class="newsletter-email">
+                        <label for="newsemail">E-mail
+                            <input type="email" name="newsemail" class="newsletter-email">
+                        </label>
                         <input type="submit" name="newsletterSubmit" class="btn-newsletter">
                         <span class="newsletter-error newsletter-message">
                             <i class="fa-solid fa-circle-exclamation"></i>valid e-mail required

@@ -35,7 +35,7 @@
     <header>
         <div class="header-top">
             <a href="index.html">
-                <img src="/images/logo_white_shadow.png" class="header-logo">
+                <img src="/images/logo_white_shadow.png" alt="Timesignature Logo" class="header-logo">
             </a>
         </div>
 
@@ -58,7 +58,7 @@
                 <a href="contact.html">Contact</a>
             </div>
 
-            <button class="hamburger-btn">
+            <button class="hamburger-btn" aria-label="hamburger menu">
                 <i class="fa fa-bars"></i>
             </button>
         </div>
@@ -113,7 +113,7 @@
 
     </main>
 
-    <button class="scroll-btn">
+    <button class="scroll-btn" aria-label="Scroll to top">
         <span>
             <i class="fa-solid fa-angle-up"></i>
         </span>
@@ -133,8 +133,9 @@
                 <h4>Sign up for our newsletter</h4>
                 <div>
                     <form class="newsletter-form">
-                        <label for="newsemail">E-mail</label>
-                        <input type="email" name="newsemail" class="newsletter-email">
+                        <label for="newsemail">E-mail
+                            <input type="email" name="newsemail" class="newsletter-email">
+                        </label>
                         <input type="submit" name="newsletterSubmit" class="btn-newsletter">
                         <span class="newsletter-error newsletter-message">
                             <i class="fa-solid fa-circle-exclamation"></i>valid e-mail required
