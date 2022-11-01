@@ -89,6 +89,10 @@ a {
     color: var(--dark-grey);
 }
 
+button, input[type=submit] {
+    font-family: "Articulat CF", sans-serif;
+}
+
 button:hover, input[type=submit]:hover {
     cursor: pointer;
 }
@@ -224,14 +228,60 @@ label {
     margin-top: 180px;
 }
 
-.breadcrumb {
+.small-nav {
+    display: flex;
     background-color: var(--dark-grey-transparent);
+    height: 32px;
 }
 
-.breadcrumb div {
-    width: 58%;
-    margin: auto;
-    padding: 8px 0;
+/* .breadcrumb-btn {
+    background: linear-gradient(30deg, var(--dark-red), var(--red));
+    padding: 0 16px;
+    border: none;
+    transition: all 0.3s;
+}
+
+.breadcrumb-btn i {
+    color: var(--white);
+    font-size: 22px;
+    vertical-align: middle;
+}
+
+.breadcrumb-btn span {
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+
+.breadcrumb-btn span:before {
+    content: "Back";
+    font-size: 18px;
+    position: absolute;
+    color: var(--white);
+    opacity: 0;
+    top: 2px;
+    left: 60px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.breadcrumb-btn:hover {
+    background-color: var(--red);
+}
+
+.breadcrumb-btn:hover span {
+    padding-right: 48px;
+}
+
+.breadcrumb-btn:hover span:before {
+    opacity: 1;
+    left: 20px;
+} */
+
+.breadcrumb {
+    align-self: center;
+    position: absolute;
+    left: 112px;
 }
 
 .post-category {
@@ -329,37 +379,32 @@ label {
     transition: 0.1s;
 }
 
-.back-btn {
-    position: sticky;
-    top: 40px;
+.breadcrumb-btn {
     background: linear-gradient(30deg, var(--dark-red), var(--red));
-    box-shadow: 2px 3px 5px var(--red-transparent);
-    padding: 8px 24px;
-    margin: 0 50px;
+    padding: 0 16px;
     border: none;
-    border-radius: 5px;
     transition: all 0.3s;
 }
 
-.back-btn i {
+.breadcrumb-btn i {
     color: var(--white);
     font-size: 22px;
     vertical-align: middle;
 }
 
-.back-btn span {
+.breadcrumb-btn span {
     display: inline-block;
     position: relative;
     transition: 0.3s;
 }
 
-.back-btn span:before {
+.breadcrumb-btn span:before {
     content: "Back";
     font-size: 18px;
     position: absolute;
     color: var(--white);
     opacity: 0;
-    top: 2px;
+    top: 3px;
     left: 60px;
     pointer-events: none;
     transition: 0.3s;
@@ -434,15 +479,11 @@ label {
         color: var(--blue-green);
     }
 
-    .back-btn:hover {
-        background-color: var(--red);
-    }
-
-    .back-btn:hover span {
-        padding-right: 40px;
+    .breadcrumb-btn:hover span {
+        padding-right: 48px;
     }
     
-    .back-btn:hover span:before {
+    .breadcrumb-btn:hover span:before {
         opacity: 1;
         left: 20px;
     }
@@ -661,7 +702,7 @@ label {
 }
 
 .contact-form {
-    padding: 8px 0 32px 0;
+    padding: 32px 0;
     margin: auto;
 }
 
@@ -755,9 +796,8 @@ label {
 
 .newsletter-mobile_container {
     display: none;
-    width: 90%;
     margin: 32px auto 0 auto;
-    padding: 16px;
+    padding: 32px 32px 48px 32px;
     border-radius: 10px;
     box-shadow: 0 3px 6px var(--black-shadow);
 }
@@ -766,9 +806,22 @@ label {
     margin-bottom: 16px;
 }
 
+.newsletter-mobile_container label, .newsletter-mobile_container input {
+    display: block;
+}
+
+.newsletter-mobile_container span {
+    position: absolute;
+}
+
+.newsletter-mobile_container input[type=email] {
+    width: 48%;
+}
+
 .newsletter-mobile_container input[type=submit] {
     color: var(--white);
     margin-top: 16px;
+    text-transform: capitalize;
 }
 
 /* ABOUT PAGE*/
@@ -949,6 +1002,7 @@ label {
 
 .bloglist h2 {
     border-bottom: 3px solid var(--red);
+    margin-bottom: 8px;
 }
 
 .bloglist > i {
@@ -1195,10 +1249,6 @@ footer a {
         margin: 16px auto;
     }
 
-    .back-btn {
-        margin-left: 24px;
-    }
-
     .carousel-details h3 {
         width: 73%;
     }
@@ -1227,10 +1277,6 @@ footer a {
         width: 100%;
         object-fit: cover;
     }
-
-    .contact-container {
-        grid-template-columns: 61% 39%;
-    }
 }
 
 @media (max-width: 1332px) {
@@ -1240,29 +1286,6 @@ footer a {
 
     .index-center h1 {
         margin-top: 120px;
-    }
-
-    .back-btn {
-        padding: 8px 52px 8px 8px;
-    }
-
-    .back-btn span:before {
-        opacity: 1;
-        left: 16px;
-    }
-
-    .scroll-btn {
-        width: 142px;
-    }
-
-    .scroll-btn span {
-        padding-left: 100px;
-    }
-
-    .scroll-btn span:after {
-        opacity: 1;
-        right: 25px;
-        width: 100px;
     }
 
     .blogposts {
@@ -1301,14 +1324,6 @@ footer a {
 }
 
 @media (min-width: 769px) and (max-width: 1332px) {
-    .back-btn:hover {
-        padding: 8px 12px 8px 8px;
-    }
-
-    .back-btn:hover span:before {
-        left: 16px;
-    }
-
     .bloglist-post:hover {
         background-color: var(--white);
         border: 1px solid var(--dark-grey);
@@ -1329,10 +1344,6 @@ footer a {
 }
 
 @media (max-width: 1200px) {
-    .back-btn {
-        margin-left: 10px;
-    }
-
     .lessons-details img {
         object-position: 81%;
     }
@@ -1341,14 +1352,14 @@ footer a {
         width: 87%;
     }
 
-    .about-container, .contact-container, .bloglist-container {
-        width: 90%;
+    .about-container, .contact-container {
+        width: 100%;
     }
 }
 
 @media (max-width: 1023px) {
     main {
-        max-width: 85%;
+        max-width: 90%;
     }
 
     h1 {
@@ -1435,6 +1446,10 @@ footer a {
 
 /* MEDIA QUERIES - TABLET/MOBILE*/
 @media (max-width: 768px) {
+    .footer-right, .breadcrumb, .header-top, .header-nav, .index-latest, .lessons-details img {
+        display: none;
+    }
+
     h1 {
         font-size: 4rem;
         line-height: 64px;
@@ -1461,10 +1476,6 @@ footer a {
         width: 175px;
     }
 
-    .header-nav {
-        display: none;
-    }
-
     .mobile-nav {
         display: block;
     }
@@ -1477,11 +1488,27 @@ footer a {
         font-size: 18px;
     }
 
-    .back-btn {
-        border-radius: 0 5px 5px 0;
-        margin: 0 0 8px 0;
-        padding: 14px 56px 14px 8px;
-        top: 169px;
+    .breadcrumb-btn {
+        padding-right: 56px;
+    }
+
+    .breadcrumb-btn span:before {
+        opacity: 1;
+        left: 16px;
+    } 
+
+    .scroll-btn {
+        width: 142px;
+    }
+
+    .scroll-btn span {
+        padding-left: 100px;
+    }
+
+    .scroll-btn span:after {
+        opacity: 1;
+        right: 25px;
+        width: 100px;
     }
 
     .latest-mobile_container {
@@ -1524,7 +1551,7 @@ footer a {
         display: block;
         width: 150px;
         padding: 20px;
-        margin: 16px auto 0 auto;
+        margin: 32px auto 16px auto;
         text-align: center;
         border-radius: 30px;
         font-weight: 500;
@@ -1542,18 +1569,18 @@ footer a {
         font-size: 1.5em;
     }
 
+    .bloglist-post {
+        border: 1px solid var(--grey);
+        border-radius: 10px;
+        box-shadow: 1px 1px 4px var(--black-shadow);
+    }
+
+    .btn-view {
+        margin-top: 16px;
+    }
+
     .about-center, .contact-center {
         background-position: 0% 35%;
-    }
-
-    .who-container {
-        display: flex;
-        flex-direction: column;
-        padding: 32px 16px;
-    }
-
-    .about-img img {
-        max-width: 100%;
     }
 
     .about-btn {
@@ -1584,37 +1611,24 @@ footer a {
         width: 100%;
         padding-left: 32px;
     }
-
-    .footer-right, .header-top, .header-nav, .index-latest, .lessons-details img {
-        display: none;
-    }
 }
 
 @media (max-width: 600px) {
-    .header-section {
-        margin-bottom: 8px;
+    .contact-img, .about-img img {
+        display: none;
     }
+
 
     .index-h2 {
         margin-top: 42px;
     }
 
-    .back-btn span:before {
-        content: "";;
-    }
-    .back-btn {
-        padding: 12px;
-    }
-
-    .blogposts {
-        grid-template-columns: 1fr;
-        margin: 16px auto;
-        width: 96%;
+    .bloglist-container, .bloglist, .newsletter-mobile_container input[type=email] {
+        width: 100%;
     }
     
     .contact-container {
-        width: 80%;
-        display: flex;
+        display: block;
     }
 
     .contact-form input[type=submit], .btn-newsletter {
@@ -1622,17 +1636,19 @@ footer a {
         padding: 16px 0;
     }
 
-    .newsletter-mobile_container {
-        width: 80%;
-        padding: 32px;
-    }
-
-    .contact-img {
-        display: none;
-    }
-
     .about-container {
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .who-container {
+        padding-bottom: 24px;
+    }
+
+    .lessons-header img {
+        height: 100%;
     }
 }
 
@@ -1669,6 +1685,20 @@ footer a {
         display: none;
     }
 
+    .blogposts {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .bloglist-post {
+        padding: 8px;
+        margin: 0;
+    }
+
+    .rest-container {
+        margin-top: 8px;
+    }
+
     .lessons-header {
         width: 100%;
     }
@@ -1690,5 +1720,9 @@ footer a {
 
     .contact-input {
         width: 100%;
+    }
+
+    .wp-block-media-text {
+        grid-template-columns: 1fr;
     }
 }
