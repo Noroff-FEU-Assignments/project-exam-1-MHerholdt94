@@ -1,7 +1,9 @@
 import { scrollTop, goBack, hamburgerMenu } from "./components/SiteButtons.js";
 import { baseUrl, blogPosts } from "./components/fetchApi.js";
 import "./components/newsletter.js";
+import { buttonScroll } from "./components/scrollEvent.js";
 
+window.addEventListener("scroll", buttonScroll);
 blogPosts(baseUrl);
 hamburgerMenu();
 goBack();

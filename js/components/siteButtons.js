@@ -7,7 +7,7 @@ export function scrollTop() {
 }
 
 export function goBack() {
-  document.querySelector(".breadcrumb-btn").addEventListener("click", () => {
+  document.querySelector(".back-btn").addEventListener("click", () => {
     history.back();
   });
 }

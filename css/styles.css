@@ -231,52 +231,8 @@ label {
 .small-nav {
     display: flex;
     background-color: var(--dark-grey-transparent);
-    height: 32px;
+    height: 40px;
 }
-
-/* .breadcrumb-btn {
-    background: linear-gradient(30deg, var(--dark-red), var(--red));
-    padding: 0 16px;
-    border: none;
-    transition: all 0.3s;
-}
-
-.breadcrumb-btn i {
-    color: var(--white);
-    font-size: 22px;
-    vertical-align: middle;
-}
-
-.breadcrumb-btn span {
-    display: inline-block;
-    position: relative;
-    transition: 0.3s;
-}
-
-.breadcrumb-btn span:before {
-    content: "Back";
-    font-size: 18px;
-    position: absolute;
-    color: var(--white);
-    opacity: 0;
-    top: 2px;
-    left: 60px;
-    pointer-events: none;
-    transition: 0.3s;
-}
-
-.breadcrumb-btn:hover {
-    background-color: var(--red);
-}
-
-.breadcrumb-btn:hover span {
-    padding-right: 48px;
-}
-
-.breadcrumb-btn:hover span:before {
-    opacity: 1;
-    left: 20px;
-} */
 
 .breadcrumb {
     align-self: center;
@@ -379,26 +335,26 @@ label {
     transition: 0.1s;
 }
 
-.breadcrumb-btn {
+.back-btn {
     background: linear-gradient(30deg, var(--dark-red), var(--red));
     padding: 0 16px;
     border: none;
     transition: all 0.3s;
 }
 
-.breadcrumb-btn i {
+.back-btn i {
     color: var(--white);
     font-size: 22px;
     vertical-align: middle;
 }
 
-.breadcrumb-btn span {
+.back-btn span {
     display: inline-block;
     position: relative;
     transition: 0.3s;
 }
 
-.breadcrumb-btn span:before {
+.back-btn span:before {
     content: "Back";
     font-size: 18px;
     position: absolute;
@@ -479,11 +435,11 @@ label {
         color: var(--blue-green);
     }
 
-    .breadcrumb-btn:hover span {
+    .back-btn:hover span {
         padding-right: 48px;
     }
     
-    .breadcrumb-btn:hover span:before {
+    .back-btn:hover span:before {
         opacity: 1;
         left: 20px;
     }
@@ -792,36 +748,6 @@ label {
     height: 100%;
     object-fit: cover;
     border-radius: 0 10px 10px 0;
-}
-
-.newsletter-mobile_container {
-    display: none;
-    margin: 32px auto 0 auto;
-    padding: 32px 32px 48px 32px;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px var(--black-shadow);
-}
-
-.newsletter-mobile_container h4 {
-    margin-bottom: 16px;
-}
-
-.newsletter-mobile_container label, .newsletter-mobile_container input {
-    display: block;
-}
-
-.newsletter-mobile_container span {
-    position: absolute;
-}
-
-.newsletter-mobile_container input[type=email] {
-    width: 48%;
-}
-
-.newsletter-mobile_container input[type=submit] {
-    color: var(--white);
-    margin-top: 16px;
-    text-transform: capitalize;
 }
 
 /* ABOUT PAGE*/
@@ -1488,11 +1414,18 @@ footer a {
         font-size: 18px;
     }
 
-    .breadcrumb-btn {
-        padding-right: 56px;
+    .small-nav {
+        background: none;
+        height: 40px;
     }
 
-    .breadcrumb-btn span:before {
+    .back-btn {
+        padding-right: 56px;
+        box-shadow: 1px 2px 5px var(--black-shadow);
+        transition: 0s;
+    }
+
+    .back-btn span:before {
         opacity: 1;
         left: 16px;
     } 
@@ -1595,10 +1528,6 @@ footer a {
         gap: 0;
     }
 
-    .newsletter-mobile_container {
-        display: block;
-    }
-
     footer {
         padding: 32px 0;
     }
@@ -1623,7 +1552,7 @@ footer a {
         margin-top: 42px;
     }
 
-    .bloglist-container, .bloglist, .newsletter-mobile_container input[type=email] {
+    .bloglist-container, .bloglist, input[type=email] {
         width: 100%;
     }
     
