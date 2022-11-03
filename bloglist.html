@@ -91,57 +91,38 @@
     <main>
         <div class="bloglist-container">
 
-            <div class="bloglist-sort">
-
-                <div class="bloglist-search">
-                    <label for="search" style="cursor:not-allowed;"><i class="fa-solid fa-magnifying-glass"></i></label>
-                    <input type="search" id="search-input" placeholder="Search blog post" style="cursor:not-allowed;">
-                    <button class="btn-search" style="cursor:not-allowed;"><i
-                            class="fa-solid fa-chevron-right"></i></button>
+            <div class="sort-container">
+                <div class="search-container">
+                    <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                    <input type="search" id="searchInput" placeholder="Search blog post">
+                    <button class="search-btn">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
                 </div>
 
-                <div class="bloglist-sort_bottom">
-
-                    <div class="bloglist-sort_buttons">
-                        <button class="newest-btn bloglist-btn">Newest</button>
-                        <button class="featured-btn bloglist-btn">Featured</button>
-                    </div>
-
-                    <div class="bloglist-categories">
-                        <label for="categories">Select category:</label>
-                        <select id="categories" style="cursor:not-allowed;" disabled>
-                            <option value="" disabled selected hidden>Select</option>
-                            <option value="article">Article</option>
-                            <option value="technique">Technique</option>
-                            <option value="playing">Playing</option>
-                            <option value="drumset">Drum set</option>
-                        </select>
-                        <p class="wip">WORK IN PROGRESS</p>
-                    </div>
+                <div class="categories-container">
+                    <label for="categories">Select category:</label>
+                    <select id="categories">
+                        <option value="" disabled selected hidden>Select</option>
+                        <option value="featured" class="category">Featured</option>
+                        <option value="7" class="category">Article</option>
+                        <option value="6" class="category">Technique</option>
+                        <option value="8" class="category">Playing</option>
+                        <option value="5" class="category">Drum set</option>
+                    </select>
+                    <button class="sort-reset">Reset</button>
                 </div>
-
             </div>
 
-            <div class="bloglist bloglist-newest">
-                <i class="fa-regular fa-clock"></i>
-                <h2>Newest</h2>
-                <div class="blogposts newest-container">
-                    <div class="loading"></div>
-                </div>
-                <div class="blogposts rest-container">
+            <div class="bloglist">
+                <i class="icon fa-solid fa-list"></i>
+                <h2 class="bloglist-heading">All posts</h2>
+                <div class="posts-container">
                     <div class="loading"></div>
                 </div>
                 <div class="view-container">
-                    <button class="btn-view" id="viewMore">View more<i class="fa-solid fa-angle-down"></i></button>
-                    <button class="btn-view" id="viewLess">View less<i class="fa-solid fa-angle-up"></i></button>
-                </div>
-            </div>
-
-            <div class="bloglist bloglist-featured" hidden>
-                <i class="fa-regular fa-star"></i>
-                <h2>Featured</h2>
-                <div class="blogposts featured-container">
-                    <div class="loading"></div>
+                    <button class="view-btn" id="viewMore">View more<i class="fa-solid fa-angle-down"></i></button>
+                    <button class="view-btn" id="viewLess">View less<i class="fa-solid fa-angle-up"></i></button>
                 </div>
             </div>
 
