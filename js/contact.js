@@ -7,25 +7,25 @@ hamburgerMenu();
 goBack();
 scrollTop();
 
-// contact form container
+// Contact form container
 const formContainer = document.querySelector(".form-container");
 
-// form inputs
+// Form inputs
 const fullName = document.querySelector("#fullName");
 const email = document.querySelector("#email");
 const subject = document.querySelector("#subject");
 const message = document.querySelector("#message");
 
-// error messages
+// Error messages
 const fullNameError = document.querySelector("#fullNameError");
 const emailError = document.querySelector("#emailError");
 const subjectError = document.querySelector("#subjectError");
 const messageError = document.querySelector("#messageError");
 
-// validation message container
+// Validation message container
 const validationMessage = document.querySelector("#validationMessage");
 
-// validate the form inputs
+// Validate the form inputs
 function formValidation(event) {
   event.preventDefault();
 
@@ -68,7 +68,7 @@ function formValidation(event) {
 
 formContainer.addEventListener("submit", formValidation);
 
-// check length of input values
+// Check length of input values
 function lengthCheck(val, len) {
   if (val.trim().length > len) {
     return true;
@@ -77,7 +77,7 @@ function lengthCheck(val, len) {
   }
 }
 
-// check if email is valid
+// Check if email is valid
 function validEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);

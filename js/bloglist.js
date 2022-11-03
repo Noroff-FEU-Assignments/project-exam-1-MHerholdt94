@@ -9,7 +9,7 @@ hamburgerMenu();
 goBack();
 scrollTop();
 
-// SEARCHING AND SORTING
+// Searching and sorting
 const sortedContainer = document.querySelector(".posts-container");
 const bloglistHeading = document.querySelector(".bloglist-heading");
 const viewBtns = document.querySelectorAll(".view-btn");

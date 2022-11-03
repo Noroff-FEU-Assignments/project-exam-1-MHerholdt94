@@ -7,41 +7,31 @@ blogPosts(baseUrl);
 hamburgerMenu();
 scrollTop();
 
-const progressZero = document.querySelector(".progress-zero");
-const progressOne = document.querySelector(".progress-one");
-const progressTwo = document.querySelector(".progress-two");
-const progressThree = document.querySelector(".progress-three");
-
+// Progress bar items as clickable buttons
+const progressItems = document.querySelectorAll(".progress-item");
 const progressCarousel = document.querySelector(".carousel");
 
-progressZero.onclick = function () {
-  progressCarousel.style = "--carousel-index:0;";
-  progressZero.classList.add("active");
-  progressOne.classList.remove("active");
-  progressTwo.classList.remove("active");
-  progressThree.classList.remove("active");
-};
+function removeClass() {
+  progressItems.forEach((progress) => {
+    progress.classList.remove("active");
+  });
+}
 
-progressOne.onclick = function () {
-  progressCarousel.style = "--carousel-index:1;";
-  progressZero.classList.remove("active");
-  progressOne.classList.add("active");
-  progressTwo.classList.remove("active");
-  progressThree.classList.remove("active");
-};
+progressItems.forEach((e) => {
+  e.addEventListener("click", function addClass(event) {
+    removeClass();
+    event.target.classList.add("active");
 
-progressTwo.onclick = function () {
-  progressCarousel.style = "--carousel-index:2;";
-  progressZero.classList.remove("active");
-  progressOne.classList.remove("active");
-  progressTwo.classList.add("active");
-  progressThree.classList.remove("active");
-};
+    const targetClass = event.target.classList[1];
 
-progressThree.onclick = function () {
-  progressCarousel.style = "--carousel-index:3;";
-  progressZero.classList.remove("active");
-  progressOne.classList.remove("active");
-  progressTwo.classList.remove("active");
-  progressThree.classList.add("active");
-};
+    if (targetClass === "progress-zero") {
+      progressCarousel.style = "--carousel-index:0;";
+    } else if (targetClass === "progress-one") {
+      progressCarousel.style = "--carousel-index:1;";
+    } else if (targetClass === "progress-two") {
+      progressCarousel.style = "--carousel-index:2;";
+    } else if (targetClass === "progress-three") {
+      progressCarousel.style = "--carousel-index:3;";
+    }
+  });
+});

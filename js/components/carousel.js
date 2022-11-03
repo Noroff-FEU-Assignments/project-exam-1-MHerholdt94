@@ -1,3 +1,8 @@
+// The following code is written with the help of a video on YouTube on
+// how to make a carousel/slider in the style of the Netflix home page.
+// The code is read, written and understood before implementing.
+// More on this in the report.
+
 document.addEventListener("click", (e) => {
   let button;
 

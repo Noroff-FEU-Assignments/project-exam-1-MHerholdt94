@@ -1,3 +1,4 @@
+// WIP date format script
 const date = new Date();
 const day = date.getDate();
 const monthNames = [
