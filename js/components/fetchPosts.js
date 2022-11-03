@@ -65,8 +65,6 @@ export async function blogPosts(url) {
                                         </a>`;
 
         const bloglistPost = document.querySelectorAll(".bloglist-post");
-        // const viewMore = document.querySelector("#viewMore");
-        // const viewLess = document.querySelector("#viewLess");
 
         for (let i = 0; i < bloglistPost.length; i++) {
           if (i > 5) {
@@ -74,7 +72,7 @@ export async function blogPosts(url) {
 
             viewMore.onclick = function () {
               for (let i = 0; i < bloglistPost.length; i++) {
-                bloglistPost[i].style.display = "grid";
+                bloglistPost[i].style.display = "flex";
               }
               viewMore.style.display = "none";
               viewLess.style.display = "block";
@@ -92,49 +90,6 @@ export async function blogPosts(url) {
           }
         }
       }
-
-      // for (let i = 0; i < posts.length; i++) {
-      //   const post = posts[i];
-
-      // if (i <= 5) {
-      //   newestContainer.innerHTML += `<a href="blog.html?id=${post.id}" class="bloglist-post">
-      //                                 <div class="bloglist-img">
-      //                                     <img src="${post._embedded["wp:featuredmedia"]["0"].source_url}">
-      //                                 </div>
-      //                                 <div>
-      //                                     <h3>${post.title.rendered}</h3>
-      //                                     <p class="post-category">${post._embedded["wp:term"]["0"]["0"].name}</p>
-      //                                     <div class="bloglist-excerpt">${post.excerpt.rendered}</div>
-      //                                 </div>
-      //                             </a>`;
-      // }
-
-      //   if (post.sticky === true) {
-      //     featuredContainer.innerHTML += `<a href="blog.html?id=${post.id}" class="bloglist-post">
-      //                                       <div class="bloglist-img">
-      //                                           <img src="${post._embedded["wp:featuredmedia"]["0"].source_url}">
-      //                                       </div>
-      //                                       <div>
-      //                                           <h3>${post.title.rendered}</h3>
-      //                                           <p class="post-category">${post._embedded["wp:term"]["0"]["0"].name}</p>
-      //                                           <div class="bloglist-excerpt">${post.excerpt.rendered}</div>
-      //                                       </div>
-      //                                   </a>`;
-      //   }
-
-      //   if (i > 5) {
-      //     restContainer.innerHTML += `<a href="blog.html?id=${post.id}" class="bloglist-post">
-      //                                     <div class="bloglist-img">
-      //                                         <img src="${post._embedded["wp:featuredmedia"]["0"].source_url}">
-      //                                     </div>
-      //                                     <div>
-      //                                         <h3>${post.title.rendered}</h3>
-      //                                         <p class="post-category">${post._embedded["wp:term"]["0"]["0"].name}</p>
-      //                                         <div class="bloglist-excerpt">${post.excerpt.rendered}</div>
-      //                                     </div>
-      //                                 </a>`;
-      //   }
-      // }
     }
   } catch (error) {
     console.log("An error has occured", error);
