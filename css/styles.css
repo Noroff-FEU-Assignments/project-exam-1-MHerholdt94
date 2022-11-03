@@ -135,6 +135,11 @@ label {
     text-transform: uppercase;
 }
 
+.header-nav .nav-active {
+    background-color: var(--dark-red);
+    color: var(--white);
+}
+
 .mobile-nav {
     display: none;
     box-shadow: 0 3px 5px var(--black-shadow);
@@ -1179,29 +1184,6 @@ footer a {
 
 .footer-right div {
     margin-top: 12px;
-}
-
-/* TESTING */
-#respond {
-    margin-top: 40px;
-}
-
-#respond input[type=text],
-#respond input[type=email],
-#respond textarea {
-    margin-bottom: 10px;
-    display: block;
-    width: 100%;
-
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -o-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -khtml-border-radius: 5px;
-    border-radius: 5px;
-
-    line-height: 1.4em;
 }
 
 /* MEDIA QUERIES - DESKTOP/LAPTOP */
