@@ -690,6 +690,16 @@ label {
     margin: 0 32px;
 }
 
+.required {
+    color: var(--red);
+    font-size: 12px;
+    vertical-align: top;
+}
+
+.required-field {
+    margin-top: 16px;
+}
+
 #validationMessage {
     display: none;
     background-color: var(--green);
@@ -749,7 +759,7 @@ label {
    font-weight: 800;
    text-transform: capitalize;
    box-shadow: 0 3px 6px var(--black-shadow);
-   margin-top: 30px;
+   margin-top: 16px;
    font-size: 21px;
    transition: 0.1s;
 }
