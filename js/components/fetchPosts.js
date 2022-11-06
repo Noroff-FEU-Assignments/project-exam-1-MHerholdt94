@@ -46,20 +46,20 @@ export async function blogPosts(url) {
 
     // BLOG LIST PAGE
     if (bloglistExists) {
-      const sortedContainer = document.querySelector(".posts-container");
+      const postsContainer = document.querySelector(".posts-container");
 
-      sortedContainer.innerHTML = "";
+      postsContainer.innerHTML = "";
 
       for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
 
-        sortedContainer.innerHTML += `<a href="blog.html?id=${post.id}" class="bloglist-post">
+        postsContainer.innerHTML += `<a href="blog.html?id=${post.id}" class="bloglist-post">
                                           <div class="bloglist-img">
                                             <img src="${post._embedded["wp:featuredmedia"]["0"].source_url}">
                                           </div>
                                           <div>
                                             <h3>${post.title.rendered}</h3>
-                                            <p class="post-category">${post._embedded["wp:term"]["0"]["0"].name}</p>
+                                            <p class="post-category">${post._embedded["wp:term"]["0"]["0"].name}<span>${post.date}</span></p>
                                             <div class="bloglist-excerpt">${post.excerpt.rendered}</div>
                                           </div>
                                         </a>`;

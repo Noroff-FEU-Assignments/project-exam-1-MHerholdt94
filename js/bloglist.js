@@ -10,7 +10,7 @@ goBack();
 scrollTop();
 
 // Searching and sorting
-const sortedContainer = document.querySelector(".posts-container");
+const postsContainer = document.querySelector(".posts-container");
 const bloglistHeading = document.querySelector(".bloglist-heading");
 const viewBtns = document.querySelectorAll(".view-btn");
 const viewMore = document.querySelector("#viewMore");
@@ -37,7 +37,7 @@ function hideViewBtns() {
 searchBtn.onclick = function () {
   let newUrl;
   newUrl = baseUrl + `&search=${search.value}`;
-  sortedContainer.innerHTML = "";
+  postsContainer.innerHTML = `<div class="loading"></div>`;
   icon.className = "";
   icon.classList.add(...searchIcon);
   categories.selectedIndex = 0;
@@ -82,13 +82,14 @@ categories.onchange = function () {
   }
 
   search.value = "";
-  sortedContainer.innerHTML = "";
+  postsContainer.innerHTML = `<div class="loading"></div>`;
   blogPosts(newUrl);
 };
 
 resetBtn.onclick = function () {
+  hideViewBtns();
   search.value = "";
-  sortedContainer.innerHTML = "";
+  postsContainer.innerHTML = `<div class="loading"></div>`;
   categories.selectedIndex = 0;
   bloglistHeading.innerText = "All posts";
   icon.className = "";
