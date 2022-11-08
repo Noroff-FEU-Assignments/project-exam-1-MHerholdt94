@@ -1,6 +1,6 @@
 import { scrollTop, goBack, hamburgerMenu } from "./components/siteButtons.js";
 import "./components/newsletter.js";
-// import { dateFormat } from "./components/date.js";
+// import { formatDate } from "./components/date.js";
 import { buttonScroll } from "./components/scrollEvent.js";
 
 window.addEventListener("scroll", buttonScroll);
@@ -29,25 +29,7 @@ async function postContent() {
     const response = await fetch(url);
     const post = await response.json();
 
-    const date = new Date(post.date);
-    const day = date.getDate();
-    const monthNames = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    const month = monthNames[date.getMonth()];
-    const year = date.getFullYear();
-    const postDate = day + ". " + month + " " + year;
+    const postDate = new Date(post.date).toLocaleDateString("en-uk");
 
     title.innerHTML = `TIME/SIGNATURE | ${post.title.rendered}`;
     breadcrumb.innerHTML = `/ ${post.title.rendered}`;
@@ -63,7 +45,7 @@ async function postContent() {
                                     rgba(0,0,0,1) 100%),
                                     url(${post._embedded["wp:featuredmedia"]["0"].source_url})`;
 
-    container.innerHTML = `<div class="post-details">
+    container.innerHTML = `<div>
                                 <div class="post-content">
                                     ${post.content.rendered}
                                 </div>

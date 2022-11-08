@@ -24,10 +24,15 @@ export async function blogPosts(url) {
       for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
 
+        const postDate = new Date(post.date).toLocaleDateString("en-uk");
+
         carouselContainer.innerHTML += `<a href="blog.html?id=${post.id}" class="carousel-post" style="background-image: url(${post._embedded["wp:featuredmedia"]["0"].source_url});">
                                             <div class="carousel-details">
                                                 <h3>${post.title.rendered}</h3>
-                                                <p class="post-category">${post._embedded["wp:term"]["0"]["0"].name}</p>
+                                                <div class="post-details">
+                                                  <span class="post-category">${post._embedded["wp:term"]["0"]["0"].name}</span>
+                                                  <span class="post-date">${postDate}</span>
+                                                </div>
                                                 <div class="carousel-excerpt">${post.excerpt.rendered}</div>
                                             </div>
                                         </a>`;
@@ -36,7 +41,10 @@ export async function blogPosts(url) {
           indexMobile.innerHTML += `<a href="blog.html?id=${post.id}" class="index-mobile_post" style="background-image: url(${post._embedded["wp:featuredmedia"]["0"].source_url});">
                                     <div class="index-mobile_details">
                                       <h3>${post.title.rendered}</h3>
-                                      <p class="post-category">${post._embedded["wp:term"]["0"]["0"].name}</p>
+                                      <div class="post-details">
+                                        <span class="post-category">${post._embedded["wp:term"]["0"]["0"].name}</span>
+                                        <span class="post-date">${postDate}</span>
+                                      </div>
                                       <div class="index-mobile_excerpt">${post.excerpt.rendered}</div>
                                     </div>
                                   </a>`;
@@ -53,13 +61,16 @@ export async function blogPosts(url) {
       for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
 
+        const postDate = new Date(post.date).toLocaleDateString("en-uk");
+
         postsContainer.innerHTML += `<a href="blog.html?id=${post.id}" class="bloglist-post">
-                                          <div class="bloglist-img">
-                                            <img src="${post._embedded["wp:featuredmedia"]["0"].source_url}">
-                                          </div>
-                                          <div>
+                                          <img src="${post._embedded["wp:featuredmedia"]["0"].source_url}" class="bloglist-img">
+                                          <div class="bloglist-details">
                                             <h3>${post.title.rendered}</h3>
-                                            <p class="post-category">${post._embedded["wp:term"]["0"]["0"].name}<span>${post.date}</span></p>
+                                            <div class="post-details">
+                                              <span class="post-category">${post._embedded["wp:term"]["0"]["0"].name}</span>
+                                              <span class="post-date">${postDate}</span>
+                                            </div>
                                             <div class="bloglist-excerpt">${post.excerpt.rendered}</div>
                                           </div>
                                         </a>`;
@@ -72,7 +83,7 @@ export async function blogPosts(url) {
 
             viewMore.onclick = function () {
               for (let i = 0; i < bloglistPost.length; i++) {
-                bloglistPost[i].style.display = "flex";
+                bloglistPost[i].style.display = "grid";
               }
               viewMore.style.display = "none";
               viewLess.style.display = "block";
