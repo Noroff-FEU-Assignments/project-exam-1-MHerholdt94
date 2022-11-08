@@ -1,5 +1,6 @@
 import { scrollTop, hamburgerMenu } from "./components/siteButtons.js";
 import { baseUrl, blogPosts } from "./components/fetchPosts.js";
+// import "./components/carousel.js";
 import "./components/carousel.js";
 import "./components/newsletter.js";
 

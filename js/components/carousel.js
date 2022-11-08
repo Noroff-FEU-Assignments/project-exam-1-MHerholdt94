@@ -1,98 +1,104 @@
-// The following code is written with the help of a video on YouTube on
-// how to make a carousel/slider in the style of the Netflix home page.
-// The code is read, written and understood before implementing.
+// The following code is written by myself with the help of a video on
+// YouTube on how to make a carousel/slider in the style of the Netflix
+// home page. The code is read and understood before implementing.
 // More on this in the report.
 
+const carousel = document.querySelector(".carousel");
+
+// assigns var name "btn" to one of the two carousel-btn's,
+// depending on which one the user clicks, calls function
 document.addEventListener("click", (e) => {
-  let button;
+  let btn;
 
   if (e.target.matches(".carousel-btn")) {
-    button = e.target;
+    btn = e.target;
   } else {
-    button = e.target.closest(".carousel-btn");
+    btn = e.target.closest(".carousel-btn");
   }
 
-  if (button != null) onButtonClick(button);
+  if (btn) {
+    postCarousel(btn);
+  }
 });
 
-function onButtonClick(button) {
-  const progressBar = button
-    .closest(".index-latest")
-    .querySelector(".progress-bar");
-
-  const carousel = button
-    .closest(".carousel-container")
-    .querySelector(".carousel");
-
+function postCarousel(btn) {
+  // gets the property value of the CSS variable "--carousel-index"
   const carouselIndex = parseInt(
     getComputedStyle(carousel).getPropertyValue("--carousel-index")
   );
+  const progress = document.querySelector(".progress-bar");
+  const progressCount = progress.children.length;
 
-  const progressBarItemCount = progressBar.children.length;
-
-  if (button.classList.contains("prev")) {
+  // if the btn clicked has the class name "prev"
+  if (btn.classList.contains("prev")) {
     if (carouselIndex - 1 < 0) {
-      carousel.style.setProperty("--carousel-index", progressBarItemCount - 1);
-      progressBar.children[carouselIndex].classList.remove("active");
-      progressBar.children[progressBarItemCount - 1].classList.add("active");
+      carousel.style.setProperty("--carousel-index", progressCount - 1);
+      progress.children[carouselIndex].classList.remove("active");
+      progress.children[progressCount - 1].classList.add("active");
     } else {
       carousel.style.setProperty("--carousel-index", carouselIndex - 1);
-      progressBar.children[carouselIndex].classList.remove("active");
-      progressBar.children[carouselIndex - 1].classList.add("active");
+      progress.children[carouselIndex].classList.remove("active");
+      progress.children[carouselIndex - 1].classList.add("active");
     }
   }
 
-  if (button.classList.contains("next")) {
-    if (carouselIndex + 1 >= progressBarItemCount) {
+  // if the btn clicked has the class name "next"
+  if (btn.classList.contains("next")) {
+    if (carouselIndex + 1 >= progressCount) {
       carousel.style.setProperty("--carousel-index", 0);
-      progressBar.children[carouselIndex].classList.remove("active");
-      progressBar.children[0].classList.add("active");
+      progress.children[carouselIndex].classList.remove("active");
+      progress.children[0].classList.add("active");
     } else {
       carousel.style.setProperty("--carousel-index", carouselIndex + 1);
-      progressBar.children[carouselIndex].classList.remove("active");
-      progressBar.children[carouselIndex + 1].classList.add("active");
+      progress.children[carouselIndex].classList.remove("active");
+      progress.children[carouselIndex + 1].classList.add("active");
     }
   }
 }
 
-document.querySelectorAll(".progress-bar").forEach(calculateProgressBar);
+// function for progress bar
+function progressLength(progress) {
+  const postCount = carousel.children.length;
 
-function calculateProgressBar(progressBar) {
-  const carousel = progressBar
-    .closest(".index-latest")
-    .querySelector(".carousel");
-
-  const itemCount = carousel.children.length;
-
-  const itemsPerScreen = parseInt(
-    getComputedStyle(carousel).getPropertyValue("--items-per-screen")
+  // gets property value of CSS variable "--posts-per-screen"
+  const postsPerScreen = parseInt(
+    getComputedStyle(carousel).getPropertyValue("--posts-per-screen")
   );
 
+  // gets the property value of the CSS variable "--carousel-index"
   const carouselIndex = parseInt(
     getComputedStyle(carousel).getPropertyValue("--carousel-index")
   );
 
-  const progressBarItemCount = Math.ceil(itemCount / itemsPerScreen);
+  // calculates the length of the progress bar
+  // length = number of total posts(12) / posts shown on screen(3)
+  // Math.ceil() in case of odd number of total posts
+  const progressPostCount = Math.ceil(postCount / postsPerScreen);
 
-  for (let i = 0; i < progressBarItemCount; i++) {
-    const barItem = document.createElement("div");
+  // create div elements depending on progressPostCount result
+  for (let i = 0; i < progressPostCount; i++) {
+    const progressBtn = document.createElement("div");
 
-    barItem.classList.add("progress-item");
+    progressBtn.classList.add("progress-item");
 
+    // if progress item has same index as carouselIndex, add class
     if (i === carouselIndex) {
-      barItem.classList.add("active");
+      progressBtn.classList.add("active");
     }
 
+    // add unique class to each progress item
     if (i === 0) {
-      barItem.classList.add("progress-zero");
+      progressBtn.classList.add("progress-zero");
     } else if (i === 1) {
-      barItem.classList.add("progress-one");
+      progressBtn.classList.add("progress-one");
     } else if (i === 2) {
-      barItem.classList.add("progress-two");
+      progressBtn.classList.add("progress-two");
     } else if (i === 3) {
-      barItem.classList.add("progress-three");
+      progressBtn.classList.add("progress-three");
     }
 
-    progressBar.append(barItem);
+    progress.append(progressBtn);
   }
 }
+
+document.querySelectorAll(".progress-bar").forEach(progressLength);

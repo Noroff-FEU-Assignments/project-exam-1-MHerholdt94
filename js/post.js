@@ -1,6 +1,5 @@
 import { scrollTop, goBack, hamburgerMenu } from "./components/siteButtons.js";
 import "./components/newsletter.js";
-// import { formatDate } from "./components/date.js";
 import { buttonScroll } from "./components/scrollEvent.js";
 
 window.addEventListener("scroll", buttonScroll);

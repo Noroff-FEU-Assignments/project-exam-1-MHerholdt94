@@ -557,6 +557,8 @@ label {
     display: flex;
     transform: translateX(calc(var(--carousel-index) * -100%));
     transition: transform 0.5s ease-in-out;
+    --carousel-index: 0;
+    --posts-per-screen: 3;
 }
 
 .carousel-post {
