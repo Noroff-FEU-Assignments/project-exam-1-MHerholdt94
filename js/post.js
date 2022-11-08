@@ -43,7 +43,7 @@ async function postContent() {
                                     rgba(0,0,0,0.3) 15%,
                                     rgba(0,0,0,0.3) 85%,
                                     rgba(0,0,0,1) 100%),
-                                    url(${post._embedded["wp:featuredmedia"]["0"].source_url})`;
+                                    url(${post._embedded["wp:featuredmedia"]["0"].source_url}) center`;
 
     container.innerHTML = `<div>
                                 <div class="post-content">
