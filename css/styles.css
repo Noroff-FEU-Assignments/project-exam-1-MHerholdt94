@@ -1265,6 +1265,7 @@ footer a {
     .bloglist-details {
         padding: 12px;
         margin-top: 8px!important;
+        border: none;
     }
 
     .bloglist-details {
