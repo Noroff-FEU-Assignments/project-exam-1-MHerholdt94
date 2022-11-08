@@ -64,7 +64,7 @@ export async function blogPosts(url) {
         const postDate = new Date(post.date).toLocaleDateString("en-uk");
 
         postsContainer.innerHTML += `<a href="blog.html?id=${post.id}" class="bloglist-post">
-                                          <img src="${post._embedded["wp:featuredmedia"]["0"].source_url}" class="bloglist-img">
+                                          <img src="${post._embedded["wp:featuredmedia"]["0"].source_url}" alt="${post._embedded["wp:featuredmedia"]["0"].alt_text}">
                                           <div class="bloglist-details">
                                             <h3>${post.title.rendered}</h3>
                                             <div class="post-details">
