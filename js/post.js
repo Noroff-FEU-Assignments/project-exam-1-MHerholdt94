@@ -60,17 +60,13 @@ async function postContent() {
       const formData = new FormData(form);
       const request = new XMLHttpRequest();
 
-      request.open(
-        "POST",
-        "http://devholdt.no/timesignature/wp-comments-post.php",
-        true
-      );
+      request.open("POST", "wp-comments-post.php", true);
 
       commentPosted.style.opacity = "1";
 
       setTimeout(function () {
         commentPosted.style.opacity = "0";
-        location.reload(true);
+        location.reload();
       }, 3000);
 
       request.send(formData);
