@@ -1136,7 +1136,6 @@ label {
 }
 
 .comment .wp-block-columns {
-    /* border: 1px solid var(--dark-grey-transparent); */
     padding: 16px;
     border-radius: 5px;
     background-color: var(--light-grey);
@@ -1179,11 +1178,27 @@ label {
     margin-top: 10px;
 }
 
+.wp-block-comments-title {
+    display: none;
+}
+
 /* .wp-block-comments {
     display: none;
 } */
 
 /*--------------------------------------------------------------*/
+
+.comment-posted {
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    padding: 8px;
+    margin: 16px 0 0 0!important;
+    opacity: 0;
+    transition: 0.3s;
+}
 
 #testCommentForm {
     display: flex;

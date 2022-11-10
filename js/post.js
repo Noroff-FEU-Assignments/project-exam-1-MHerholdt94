@@ -50,14 +50,33 @@ async function postContent() {
                                 </div>
                             </div>`;
 
-    // const formSubmit = document.querySelector("#submit");
-    // const commentform = document.querySelector("#commentform");
-    // formSubmit.classList.add("cta");
+    const formSubmit = document.querySelector("#submit");
+    formSubmit.classList.add("cta");
 
-    // formSubmit.onclick = function () {
-    //   commentform.style.setProperty("action", )
-    //   commentform.reset();
-    // };
+    const form = document.querySelector("#commentform");
+    const commentPosted = document.querySelector(".comment-posted");
+
+    form.addEventListener("submit", (event) => {
+      const formData = new FormData(form);
+      const request = new XMLHttpRequest();
+
+      request.open(
+        "POST",
+        "http://devholdt.no/timesignature/wp-comments-post.php",
+        true
+      );
+
+      commentPosted.style.opacity = "1";
+
+      setTimeout(function () {
+        commentPosted.style.opacity = "0";
+        location.reload(true);
+      }, 3000);
+
+      request.send(formData);
+      form.reset();
+      event.preventDefault();
+    });
   } catch (error) {
     console.log(error);
     container.innerHTML = "An error occured when fetching blog post details";
