@@ -321,8 +321,7 @@ label {
     border: none;
     border-radius: 10px;
     font-size: 21px;
-    font-weight: 800;
-    text-transform: capitalize;
+    font-weight: 700;
 }
 
 .btn-green {
@@ -1082,6 +1081,135 @@ label {
 .wp-block-media-text__content {
     margin: auto;
 }
+
+.wp-block-comment-template {
+    padding: 0;
+}
+
+.wp-block-comment-template li {
+    list-style: none;
+}
+
+.wp-block-comment-content p {
+    margin: 16px 0 0 0;
+}
+
+#reply-title {
+    display: none;
+}
+
+.wp-block-avatar img {
+    width: 32px;
+    float: left;
+    margin-right: 8px;
+}
+
+.comments-h4 {
+    margin-top: 56px;
+    border-bottom: 4px solid var(--dark-grey-transparent);
+    padding-bottom: 8px;
+}
+
+.wp-block-comments {
+    margin-top: 20px;
+}
+
+.wp-block-comment-author-name {
+    font-weight: 500;
+}
+
+.wp-block-comment-reply-link a {
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: var(--blue-green);
+    color: var(--white);
+    display: none;
+}
+
+.wp-block-comment-date {
+    font-style: italic;
+    cursor: text;
+}
+
+.wp-block-comment-date a {
+    pointer-events: none;
+}
+
+.comment .wp-block-columns {
+    /* border: 1px solid var(--dark-grey-transparent); */
+    padding: 16px;
+    border-radius: 5px;
+    background-color: var(--light-grey);
+}
+
+#commentform {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#commentform p {
+    width: 100%;
+    margin: 16px 0 0 0;
+}
+
+#commentform label {
+    display: block;
+}
+
+#commentform textarea {
+    max-width: 100%;
+    max-height: 200px;
+    font-family: "Articulat CF", sans-serif;
+    font-size: 16px;
+    padding: 8px;
+}
+
+#commentform input[type=text], #commentform input[type=email] {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.comment-form-url, .comment-form-cookies-consent {
+    display: none;
+}
+
+#commentform input[type=submit] {
+    background-color: var(--blue-green);
+    color: var(--white);
+    margin-top: 10px;
+}
+
+/* .wp-block-comments {
+    display: none;
+} */
+
+/*--------------------------------------------------------------*/
+
+#testCommentForm {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto;
+}
+
+#testCommentForm label {
+    margin: 16px 0 4px 0;
+}
+
+.test-form_input {
+    width: 100%;
+    padding: 10px 8px;
+    font-family: "Articulat CF", sans-serif;
+    font-size: 16px;
+}
+
+#testSubmit {
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+/*--------------------------------------------------------------*/
 
 .budget-container figure {
     border-radius: 10px;

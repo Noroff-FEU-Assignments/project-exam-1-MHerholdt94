@@ -93,9 +93,10 @@ function progressLength(progress) {
       progressBtn.classList.add("progress-one");
     } else if (i === 2) {
       progressBtn.classList.add("progress-two");
-    } else if (i === 3) {
-      progressBtn.classList.add("progress-three");
     }
+    // else if (i === 3) {
+    //   progressBtn.classList.add("progress-three");
+    // }
 
     progress.append(progressBtn);
   }

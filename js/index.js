@@ -31,8 +31,9 @@ progressItems.forEach((e) => {
       progressCarousel.style = "--carousel-index:1;";
     } else if (targetClass === "progress-two") {
       progressCarousel.style = "--carousel-index:2;";
-    } else if (targetClass === "progress-three") {
-      progressCarousel.style = "--carousel-index:3;";
     }
+    // else if (targetClass === "progress-three") {
+    //   progressCarousel.style = "--carousel-index:3;";
+    // }
   });
 });

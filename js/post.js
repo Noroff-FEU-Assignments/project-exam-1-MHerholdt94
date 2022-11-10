@@ -49,6 +49,15 @@ async function postContent() {
                                     ${post.content.rendered}
                                 </div>
                             </div>`;
+
+    // const formSubmit = document.querySelector("#submit");
+    // const commentform = document.querySelector("#commentform");
+    // formSubmit.classList.add("cta");
+
+    // formSubmit.onclick = function () {
+    //   commentform.style.setProperty("action", )
+    //   commentform.reset();
+    // };
   } catch (error) {
     console.log(error);
     container.innerHTML = "An error occured when fetching blog post details";
