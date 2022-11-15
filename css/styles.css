@@ -1094,7 +1094,7 @@ label {
     margin: 16px 0 0 0;
 }
 
-#reply-title {
+#comments, #reply-title, .comment-form-url, .comment-form-cookies-consent {
     display: none;
 }
 
@@ -1141,6 +1141,13 @@ label {
     background-color: var(--light-grey);
 }
 
+.no-comments {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: var(--light-grey);
+    border-radius: 5px;
+}
+
 #commentform {
     display: flex;
     flex-wrap: wrap;
@@ -1168,25 +1175,11 @@ label {
     font-size: 16px;
 }
 
-.comment-form-url, .comment-form-cookies-consent {
-    display: none;
-}
-
 #commentform input[type=submit] {
     background-color: var(--blue-green);
     color: var(--white);
     margin-top: 10px;
 }
-
-.wp-block-comments-title {
-    display: none;
-}
-
-/* .wp-block-comments {
-    display: none;
-} */
-
-/*--------------------------------------------------------------*/
 
 .comment-posted {
     background-color: var(--green);
@@ -1199,6 +1192,12 @@ label {
     opacity: 0;
     transition: 0.3s;
 }
+
+/* .wp-block-comments {
+    display: none;
+} */
+
+/*--------------------------------------------------------------*/
 
 #testCommentForm {
     display: flex;

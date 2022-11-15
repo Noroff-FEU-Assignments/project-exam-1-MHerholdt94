@@ -53,6 +53,28 @@ async function postContent() {
     const formSubmit = document.querySelector("#submit");
     formSubmit.classList.add("cta");
 
+    const comments = document.getElementsByClassName(
+      "wp-block-comment-template"
+    );
+    const commentsExist = comments.length > 0;
+
+    function noComments() {
+      const noComments = document.createElement("div");
+      const noCoNode = document.createTextNode(
+        "There are no comments here yet :("
+      );
+      noComments.classList.add("no-comments");
+      noComments.appendChild(noCoNode);
+
+      const commentsContainer = document.querySelector(".wp-block-group");
+      const commentsChild = document.querySelector(".wp-block-comments");
+      commentsContainer.insertBefore(noComments, commentsChild);
+    }
+
+    if (!commentsExist) {
+      noComments();
+    }
+
     const form = document.querySelector("#commentform");
     const commentPosted = document.querySelector(".comment-posted");
 
