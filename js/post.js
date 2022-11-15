@@ -146,7 +146,7 @@ async function postContent() {
       setTimeout(function () {
         commentPosted.style.opacity = "0";
         location.reload();
-      }, 3000);
+      }, 2000);
 
       request.send(formData);
       form.reset();
