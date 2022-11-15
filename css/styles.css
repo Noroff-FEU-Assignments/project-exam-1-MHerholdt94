@@ -147,15 +147,20 @@ label {
 }
 
 .mobile-header {
-    padding: 22px;
+    height: 64px;
+    display: flex;
+    align-items: center;
     background-color: var(--dark-red);
 }
 
 .mobile-header a {
     font-size: 24px;
+    margin-left: 8px;
+    padding: 8px;
     font-family: "Timonium", sans-serif;
     text-transform: uppercase;
     color: var(--white);
+    z-index: 1;
 }
 
 .hamburger-btn {
@@ -163,7 +168,8 @@ label {
     top: 0;
     right: 0;
     border: none;
-    padding: 23px 26px;
+    height: 64px;
+    width: 64px;
     background-color: var(--dark-red);
     font-size: 1.2em;
     color: var(--white);
@@ -261,6 +267,44 @@ label {
     color: var(--dark-red);
 }
 
+.form-input {
+    transition: 0.1s;
+    margin: 4px 0;
+    border: 2px solid var(--light-grey);
+    border-style: none none solid none;
+    padding: 0 8px;
+    background-color: var(--light-grey);
+    font-size: 1em;
+}
+
+.form-text {
+    height: 40px;
+}
+
+.form-textarea {
+    height: 150px;
+    padding: 8px;
+    font-family: "Articulat CF", sans-serif;
+    resize: none;
+}
+
+.form-input:focus {
+    outline: none;
+    border: 2px solid var(--dark-grey);
+    border-style: none none solid none;
+}
+
+.required {
+    font-size: 10px;
+    vertical-align: top;
+    color: var(--red);
+}
+
+.required-field-message {
+    display: block;
+    margin-top: 16px;
+}
+
 .newsletter-message {
     display: none;
     margin-left: 16px;
@@ -316,23 +360,22 @@ label {
 
 /* BUTTONS/CTA */
 .cta {
-    box-shadow: 0 3px 6px var(--black-shadow);
+    transition: 0.1s;
     padding: 15px 20px;
     border: none;
     border-radius: 10px;
     font-size: 21px;
     font-weight: 700;
+    font-family: "Articulat CF", sans-serif;
 }
 
 .btn-green {
-    transition: 0.1s;
     box-shadow: 2px 3px 5px var(--blue-green-transparent);
     background: linear-gradient(20deg, var(--blue-green-transparent), var(--dark-blue-green-transparent));
     color: var(--blue-green);
 }
 
 .btn-red {
-    transition: 0.1s;
     box-shadow: 2px 3px 5px var(--red-transparent);
     background: linear-gradient(20deg, var(--red-transparent), var(--dark-red-transparent));
     color: var(--red);
@@ -341,12 +384,8 @@ label {
 .btn-newsletter {
     transition: 0.1s;
     box-shadow: 0 3px 3px var(--dark-blue-green);
-    padding: 10px 20px;
     border: 1px solid var(--blue-green);
-    border-radius: 10px;
     background-color: var(--blue-green);
-    font-size: 18px;
-    font-weight: 800;
 }
 
 .back-btn {
@@ -476,16 +515,16 @@ label {
         background-color: var(--grey);
     }
 
-    .contact-input:hover {
+    .form-input:hover {
         border: 2px solid var(--dark-grey);
         border-style: none none solid none;
     }
 
-    .contact-form input[type=submit]:hover {
+    /* .contact-form input[type=submit]:hover {
         border: 2px solid var(--blue-green);
         background-color: var(--blue-green);
         color: var(--white);
-    }
+    } */
 
     .search-btn:hover {
         background: linear-gradient(45deg, var(--red), var(--light-red));
@@ -691,16 +730,6 @@ label {
     margin: 0 32px;
 }
 
-.required {
-    font-size: 12px;
-    vertical-align: top;
-    color: var(--red);
-}
-
-.required-field {
-    margin-top: 16px;
-}
-
 #validationMessage {
     display: none;
     margin: 16px auto;
@@ -720,49 +749,15 @@ label {
     color: var(--light-red);
 }
 
-.contact-input {
-    transition: 0.1s;
-    margin: 4px 0;
-    border: 2px solid var(--light-grey);
-    border-style: none none solid none;
-    padding: 0 8px;
-    background-color: var(--light-grey);
-    font-size: 1em;
-}
-
-.contact-text {
-    height: 40px;
-}
-
-.contact-textarea {
-    height: 150px;
-    padding: 8px;
-    font-family: "Articulat CF", sans-serif;
-    resize: none;
-}
-
-.contact-input:focus {
-    outline: none;
-    border: 2px solid var(--dark-grey);
-    border-style: none none solid none;
-}
-
 .contact-form label {
     margin-top: 30px;
     padding-left: 4px;
 }
 
-.contact-form input[type=submit] {
+#contactSubmit {
     transition: 0.1s;
     margin-top: 16px;
-    box-shadow: 0 3px 6px var(--black-shadow);
-    border: 2px solid var(--blue-green);
-    border-radius: 10px;
-    width: 150px;
-    height: 60px;
-    font-size: 21px;
-    font-weight: 800;
-    text-transform: capitalize;
+    width: 56%;
 }
 
 .contact-img {
@@ -1063,6 +1058,7 @@ label {
     height: 100%;
 }
 
+/* INDIVIDUAL POST STYLES */
 .wp-block-media-text {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1070,7 +1066,7 @@ label {
     margin: 16px auto;
 }
 
-.wp-block-media-text p {
+.wp-block-media-text__content, .wp-block-media-text p {
     margin: auto;
 }
 
@@ -1078,10 +1074,68 @@ label {
     object-fit: cover;
 }
 
-.wp-block-media-text__content {
-    margin: auto;
+.budget-container {
+    grid-template-rows: 300px;
+    border: 1px solid var(--dark-grey-transparent);
+    border-radius: 10px;
+    padding: 18px;
 }
 
+.budget-container figure {
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.budget-container h5 {
+    margin-bottom: 8px;
+}
+
+table {
+    margin: 16px auto 0 auto;
+    border: 1px solid var(--dark-grey-transparent);
+    border-style: solid solid none solid;
+    width: 100%;
+    height: 100%;
+    padding: 8px 0;
+}
+
+td {
+    padding: 8px 20px;
+}
+
+td:first-child {
+    text-align: center;
+}
+
+.post-content li {
+    margin: 8px 0 16px 0;
+}
+
+.post-button {
+    margin: 10px auto 64px auto;
+}
+
+.post-button a {
+    box-shadow: 2px 3px 5px var(--black-shadow);
+    border-radius: 7px;
+    padding: 14px 24px;
+    background: var(--red);
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.post-button i {
+    margin-left: 4px;
+    color: var(--white);
+}
+
+.wp-block-audio audio {
+    width: 100%;
+}
+
+/* POST COMMENT SECTION */
 .wp-block-comment-template {
     padding: 0;
 }
@@ -1092,10 +1146,6 @@ label {
 
 .wp-block-comment-content p {
     margin: 16px 0 0 0;
-}
-
-#comments, #reply-title, .comment-form-url, .comment-form-cookies-consent {
-    display: none;
 }
 
 .wp-block-avatar img {
@@ -1162,23 +1212,13 @@ label {
     display: block;
 }
 
-#commentform textarea {
-    max-width: 100%;
-    max-height: 200px;
-    font-family: "Articulat CF", sans-serif;
-    font-size: 16px;
-    padding: 8px;
+#submit {
+    margin-top: 16px;
 }
 
-#commentform input[type=text], #commentform input[type=email] {
-    padding: 8px;
-    font-size: 16px;
-}
-
-#commentform input[type=submit] {
-    background-color: var(--blue-green);
+#submit:disabled {
+    background-color: var(--light-grey);
     color: var(--white);
-    margin-top: 10px;
 }
 
 .comment-posted {
@@ -1193,105 +1233,8 @@ label {
     transition: 0.3s;
 }
 
-/* .wp-block-comments {
+#comments, #reply-title, .comment-form-url, .comment-form-cookies-consent, .budget-container figure img {
     display: none;
-} */
-
-/*--------------------------------------------------------------*/
-
-#testCommentForm {
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    margin: auto;
-}
-
-#testCommentForm label {
-    margin: 16px 0 4px 0;
-}
-
-.test-form_input {
-    width: 100%;
-    padding: 10px 8px;
-    font-family: "Articulat CF", sans-serif;
-    font-size: 16px;
-}
-
-#testSubmit {
-    padding: 8px 16px;
-    font-size: 16px;
-    margin-top: 16px;
-}
-
-/*--------------------------------------------------------------*/
-
-.budget-container figure {
-    border-radius: 10px;
-    background-size: cover;
-}
-
-.budget-container figure img {
-    display: none;
-}
-
-.budget-container {
-    grid-template-rows: 300px;
-    border: 1px solid var(--dark-grey-transparent);
-    border-radius: 10px;
-    padding: 18px;
-}
-
-.budget-container h5 {
-    margin-bottom: 8px;
-}
-
-table {
-    margin: 16px auto 0 auto;
-    border: 1px solid var(--dark-grey-transparent);
-    border-style: solid solid none solid;
-    width: 100%;
-    height: 100%;
-    padding: 8px 0;
-}
-
-td {
-    padding: 8px 20px;
-}
-
-td:first-child {
-    text-align: center;
-}
-
-.post-content li {
-    margin: 8px 0 16px 0;
-}
-
-.wp-block-group p {
-    margin: 0;
-}
-
-.post-button {
-    margin: 10px auto 64px auto;
-}
-
-.post-button a {
-    box-shadow: 2px 3px 5px var(--black-shadow);
-    border-radius: 7px;
-    padding: 14px 24px;
-    background: var(--red);
-    font-size: 18px;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--white);
-}
-
-.post-button i {
-    margin-left: 4px;
-    color: var(--white);
-}
-
-.wp-block-audio audio {
-    width: 100%;
 }
 
 /* FOOTER */
@@ -1502,6 +1445,10 @@ footer a {
         box-shadow: 0 2px 4px var(--black-shadow);
     }
 
+    main {
+        margin-top: 24px;
+    }
+
     .header-top {
         text-align: center;
     }
@@ -1700,7 +1647,7 @@ footer a {
         display: none;
     }
 
-    .bloglist-container, input[type=email] {
+    .bloglist-container {
         width: 100%;
     }
 
@@ -1740,6 +1687,10 @@ footer a {
         content: "|";
         padding: 0 16px;
         color: var(--red);
+    }
+
+    #commentform, .no-comments, .wp-block-comment-template {
+        margin: 16px;
     }
 
     .latest-mobile_posts {
@@ -1796,7 +1747,7 @@ footer a {
         margin-top: 8px;
     }
 
-    .lessons-header, .contact-input, .categories-container select {
+    .lessons-header, .form-input, .categories-container select {
         width: 100%;
     }
 
@@ -1824,15 +1775,50 @@ footer a {
     }
 
 
+    #postSub span::after {
+        content: "|";
+        padding: 0 100px;
+    }
+
     #postSub span {
         font-size: 14px;
     }
 
     #postSub span::after {
-        padding: 0 8px;
+        content: "|";
+        padding: 0 4px;
+        color: var(--red);
+    }
+
+    #author, #email {
+        width: 100%;
+    }
+
+    #commentform, .no-comments, .wp-block-comment-template {
+        margin: 8px;
     }
 
     .categories-container {
         padding: 16px;
+    }
+}
+
+@media (max-width: 350px) {
+    #postSub {
+        flex-direction: column;
+    }
+
+    #postSub span::after {
+        content: "";
+    }
+
+    #postSub span {
+        border-bottom: 2px solid var(--red);
+        width: 158px;
+        margin: auto;
+    }
+
+    #postSub span:last-child {
+        border-style: none;
     }
 }

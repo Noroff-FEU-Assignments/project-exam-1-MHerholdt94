@@ -11,10 +11,10 @@ scrollTop();
 const formContainer = document.querySelector(".form-container");
 
 // Form inputs
-const fullName = document.querySelector("#fullName");
-const email = document.querySelector("#email");
-const subject = document.querySelector("#subject");
-const message = document.querySelector("#message");
+const fullName = document.querySelector("#contactFullName");
+const email = document.querySelector("#contactEmail");
+const subject = document.querySelector("#contactSubject");
+const message = document.querySelector("#contactMessage");
 
 // Error messages
 const fullNameError = document.querySelector("#fullNameError");

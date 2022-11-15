@@ -17,12 +17,12 @@ export function hamburgerMenu() {
   const menu = document.querySelector("#hamburgerMenu");
 
   hamburgerBtn.onclick = function () {
-    if (menu.style.top === "68px") {
+    if (menu.style.top === "64px") {
       menu.style.top = "240px";
       menu.style.opacity = "0";
       menu.style.pointerEvents = "none";
     } else {
-      menu.style.top = "68px";
+      menu.style.top = "64px";
       menu.style.opacity = "1";
       menu.style.pointerEvents = "auto";
     }

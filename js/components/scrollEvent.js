@@ -4,7 +4,7 @@ export function buttonScroll() {
 
   if (windowWidth.matches && window.scrollY >= 205) {
     backBtn.style.position = "fixed";
-    backBtn.style.top = "68px";
+    backBtn.style.top = "64px";
     backBtn.style.height = "40px";
   } else {
     backBtn.style.position = "relative";

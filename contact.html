@@ -107,13 +107,16 @@
                     action="https://devholdt.no/timesignature/wp-json/contact-form-7/v1/contact-forms/369/feedback"
                     method="POST">
 
+                    <p class="required-field-message">Required fields are marked <span class="required"><i
+                                class="fa-solid fa-asterisk"></i></span></p>
+
                     <label for="fullName">Name
                         <span class="required">
                             <i class="fa-solid fa-asterisk"></i>
                         </span>
                     </label>
-                    <input type="text" name="fullName" id="fullName" placeholder="min 5 characters"
-                        class="contact-input contact-text">
+                    <input type="text" name="fullName" id="contactFullName" placeholder="min 5 characters"
+                        class="form-input form-text">
                     <div class="form-error" id="fullNameError"><i class="fa-solid fa-circle-exclamation"></i> must be
                         minimum 5 characters</div>
 
@@ -122,8 +125,8 @@
                             <i class="fa-solid fa-asterisk"></i>
                         </span>
                     </label>
-                    <input type="text" name="email" id="email" placeholder="e-mail required"
-                        class="contact-input contact-text">
+                    <input type="text" name="email" id="contactEmail" placeholder="e-mail required"
+                        class="form-input form-text">
                     <div class="form-error" id="emailError"><i class="fa-solid fa-circle-exclamation"></i> must be a
                         valid e-mail address</div>
 
@@ -132,8 +135,8 @@
                             <i class="fa-solid fa-asterisk"></i>
                         </span>
                     </label>
-                    <input type="text" name="subject" id="subject" placeholder="min 15 characters"
-                        class="contact-input contact-text">
+                    <input type="text" name="subject" id="contactSubject" placeholder="min 15 characters"
+                        class="form-input form-text">
                     <div class="form-error" id="subjectError"><i class="fa-solid fa-circle-exclamation"></i> must be
                         minimum 15 characters</div>
 
@@ -142,15 +145,12 @@
                             <i class="fa-solid fa-asterisk"></i>
                         </span>
                     </label>
-                    <textarea name="message" id="message" placeholder="min 25 characters"
-                        class="contact-input contact-textarea"></textarea>
+                    <textarea name="message" id="contactMessage" placeholder="min 25 characters"
+                        class="form-input form-textarea"></textarea>
                     <div class="form-error" id="messageError"><i class="fa-solid fa-circle-exclamation"></i> must be
                         minimum 25 characters</div>
 
-                    <p class="required-field"><span class="required"><i class="fa-solid fa-asterisk"></i></span>
-                        required field</p>
-
-                    <input type="submit" name="submit" id="submit" class="btn-green">
+                    <input type="submit" name="submit" id="contactSubmit" class="cta btn-green">
 
                 </form>
 
@@ -183,7 +183,7 @@
                         <label for="contactEmail">E-mail
                             <input type="email" id="contactEmail" name="newsemail" class="newsletter-email">
                         </label>
-                        <input type="submit" name="newsletterSubmit" class="btn-newsletter">
+                        <input type="submit" name="newsletterSubmit" class="cta btn-newsletter">
                         <span class="newsletter-error newsletter-message">
                             <i class="fa-solid fa-circle-exclamation"></i>valid e-mail required
                         </span>
