@@ -1219,6 +1219,7 @@ td:first-child {
 #submit:disabled {
     background-color: var(--light-grey);
     color: var(--white);
+    cursor: default;
 }
 
 .comment-posted {

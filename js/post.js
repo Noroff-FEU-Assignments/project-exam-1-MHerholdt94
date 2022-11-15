@@ -50,91 +50,86 @@ async function postContent() {
                                 </div>
                             </div>`;
 
-    // const formSubmit = document.querySelector("#submit");
-    // formSubmit.classList.add("btn-green");
+    const comments = document.getElementsByClassName(
+      "wp-block-comment-template"
+    );
+    const commentsExist = comments.length > 0;
 
-    // const comments = document.getElementsByClassName(
-    //   "wp-block-comment-template"
-    // );
-    // const commentsExist = comments.length > 0;
+    function noComments() {
+      const noComments = document.createElement("div");
+      const noCoTxt = document.createTextNode(
+        "There are no comments here yet :("
+      );
+      noComments.classList.add("no-comments");
+      noComments.appendChild(noCoTxt);
 
-    // function noComments() {
-    //   const noComments = document.createElement("div");
-    //   const noCoTxt = document.createTextNode(
-    //     "There are no comments here yet :("
-    //   );
-    //   noComments.classList.add("no-comments");
-    //   noComments.appendChild(noCoTxt);
+      const commentsContainer = document.querySelector(".comments-section");
+      const commentsChild = document.querySelector(".wp-block-comments");
+      commentsContainer.insertBefore(noComments, commentsChild);
+    }
 
-    //   const commentsContainer = document.querySelector(".comments-section");
-    //   const commentsChild = document.querySelector(".wp-block-comments");
-    //   commentsContainer.insertBefore(noComments, commentsChild);
-    // }
-
-    // if (!commentsExist) {
-    //   noComments();
-    // }
-
-    // const textarea = form.querySelector("#comment");
-    // const author = form.querySelector("#author");
-    // const email = form.querySelector("#email");
-    // const button = form.querySelector(".btn-green");
-
-    // button.disabled = true;
-
-    // textarea.classList.add("form-textarea");
-
-    // textarea.setAttribute("placeholder", "min 10 characters");
-    // author.setAttribute("placeholder", "min 5 characters");
-    // email.setAttribute("placeholder", "email required");
-
-    // form.querySelectorAll("input").forEach((input) => {
-    //   input.classList.add("form-text");
-    // });
-
-    // form.querySelectorAll("p").forEach((p) => {
-    //   p.lastElementChild.classList.add("form-input");
-    // });
-
-    // form
-    //   .querySelector(".required-field-message")
-    //   .classList.remove("form-input");
-
-    // button.classList.add("cta");
-    // button.classList.remove("form-text");
-
-    // form.querySelectorAll(".required").forEach((r) => {
-    //   r.innerHTML = `<i class="fa-solid fa-asterisk"></i>`;
-    // });
-
-    // function lengthCheck(val, len) {
-    //   if (val.trim().length > len) {
-    //     return true;
-    //   } else {
-    //     return false;
-    //   }
-    // }
-
-    // function validEmail(email) {
-    //   const regEx = /\S+@\S+\.\S+/;
-    //   const patternMatches = regEx.test(email);
-    //   return patternMatches;
-    // }
-
-    // form.onkeyup = function () {
-    //   if (
-    //     lengthCheck(comment.value, 9) === true &&
-    //     lengthCheck(author.value, 4) === true &&
-    //     validEmail(email.value) === true
-    //   ) {
-    //     button.disabled = false;
-    //   } else {
-    //     button.disabled = true;
-    //   }
-    // };
+    if (!commentsExist) {
+      noComments();
+    }
 
     const form = document.querySelector("#commentform");
-    const commentPosted = form.querySelector(".comment-posted");
+    const commentPosted = document.querySelector(".comment-posted");
+    const textarea = form.querySelector("#comment");
+    const author = form.querySelector("#author");
+    const email = form.querySelector("#email");
+    const formSubmit = document.querySelector("#submit");
+
+    textarea.classList.add("form-textarea");
+    formSubmit.classList.add("cta", "btn-green");
+    formSubmit.disabled = true;
+
+    textarea.setAttribute("placeholder", "min 10 characters");
+    author.setAttribute("placeholder", "min 5 characters");
+    email.setAttribute("placeholder", "email required");
+
+    form.querySelectorAll("input").forEach((input) => {
+      input.classList.add("form-text");
+    });
+
+    formSubmit.classList.remove("form-text");
+
+    form.querySelectorAll("p").forEach((p) => {
+      p.lastElementChild.classList.add("form-input");
+    });
+
+    form
+      .querySelector(".required-field-message")
+      .classList.remove("form-input");
+
+    form.querySelectorAll(".required").forEach((r) => {
+      r.innerHTML = `<i class="fa-solid fa-asterisk"></i>`;
+    });
+
+    function lengthCheck(val, len) {
+      if (val.trim().length >= len) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function validEmail(email) {
+      const regEx = /\S+@\S+\.\S+/;
+      const patternMatches = regEx.test(email);
+      return patternMatches;
+    }
+
+    form.onkeyup = function () {
+      if (
+        lengthCheck(comment.value, 10) === true &&
+        lengthCheck(author.value, 5) === true &&
+        validEmail(email.value) === true
+      ) {
+        formSubmit.disabled = false;
+      } else {
+        formSubmit.disabled = true;
+      }
+    };
 
     form.addEventListener("submit", (event) => {
       const formData = new FormData(form);
