@@ -26,7 +26,7 @@ export async function blogPosts(url) {
 
         const postDate = new Date(post.date).toLocaleDateString("en-uk");
 
-        carouselContainer.innerHTML += `<a href="blog.html?id=${post.id}" class="carousel-post" style="background-image: url(${post._embedded["wp:featuredmedia"]["0"].source_url});">
+        carouselContainer.innerHTML += `<a href="post.html?id=${post.id}" class="carousel-post" style="background-image: url(${post._embedded["wp:featuredmedia"]["0"].source_url});">
                                             <div class="carousel-details">
                                                 <h3>${post.title.rendered}</h3>
                                                 <div class="post-details">
@@ -38,7 +38,7 @@ export async function blogPosts(url) {
                                         </a>`;
 
         if (i <= 3) {
-          indexMobile.innerHTML += `<a href="blog.html?id=${post.id}" class="index-mobile_post" style="background-image: url(${post._embedded["wp:featuredmedia"]["0"].source_url});">
+          indexMobile.innerHTML += `<a href="post.html?id=${post.id}" class="index-mobile_post" style="background-image: url(${post._embedded["wp:featuredmedia"]["0"].source_url});">
                                     <div class="index-mobile_details">
                                       <h3>${post.title.rendered}</h3>
                                       <div class="post-details">
@@ -63,7 +63,7 @@ export async function blogPosts(url) {
 
         const postDate = new Date(post.date).toLocaleDateString("en-uk");
 
-        postsContainer.innerHTML += `<a href="blog.html?id=${post.id}" class="bloglist-post">
+        postsContainer.innerHTML += `<a href="post.html?id=${post.id}" class="bloglist-post">
                                           <img src="${post._embedded["wp:featuredmedia"]["0"].source_url}" alt="${post._embedded["wp:featuredmedia"]["0"].alt_text}">
                                           <div class="bloglist-details">
                                             <h3>${post.title.rendered}</h3>

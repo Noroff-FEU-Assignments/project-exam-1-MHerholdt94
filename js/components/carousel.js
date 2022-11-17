@@ -58,6 +58,12 @@ function postCarousel(btn) {
 
 // function for progress bar
 function progressLength(progress) {
+  const numberOfPosts = 9;
+
+  for (let i = 1; i <= numberOfPosts; i++) {
+    carousel.innerHTML += `<div class="post-div"></div>`;
+  }
+
   const postCount = carousel.children.length;
 
   // gets property value of CSS variable "--posts-per-screen"
@@ -71,7 +77,7 @@ function progressLength(progress) {
   );
 
   // calculates the length of the progress bar
-  // length = number of total posts(12) / posts shown on screen(3)
+  // length = number of total posts(9) / posts shown on screen(3)
   // Math.ceil() in case of odd number of total posts
   const progressPostCount = Math.ceil(postCount / postsPerScreen);
 
