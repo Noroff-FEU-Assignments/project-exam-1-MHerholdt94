@@ -87,10 +87,6 @@ a {
     color: var(--dark-grey);
 }
 
-/* button, input[type=submit] {
-    font-family: "Articulat CF", sans-serif;
-} */
-
 button:hover, input[type=submit]:hover {
     cursor: pointer;
 }
@@ -401,7 +397,7 @@ label {
     transition: 0.3s;
 }
 
-.back-btn span:before {
+.back-btn span::before {
     content: "Back";
     position: absolute;
     top: 3px;
@@ -432,7 +428,7 @@ label {
     color: var(--white);
 }
 
-.scroll-btn span:after {
+.scroll-btn span::after {
     content: "Scroll to top";
     position: absolute;
     top: 2px;
@@ -480,7 +476,7 @@ label {
         padding-right: 48px;
     }
     
-    .back-btn:hover span:before {
+    .back-btn:hover span::before {
         left: 20px;
         opacity: 1;
     }
@@ -494,7 +490,7 @@ label {
         padding-left: 100px;
     }
     
-    .scroll-btn:hover span:after {
+    .scroll-btn:hover span::after {
         right: 25px;
         opacity: 1;
         width: 100px;
@@ -512,12 +508,6 @@ label {
         border: 2px solid var(--dark-grey);
         border-style: none none solid none;
     }
-
-    /* .contact-form input[type=submit]:hover {
-        border: 2px solid var(--blue-green);
-        background-color: var(--blue-green);
-        color: var(--white);
-    } */
 
     .search-btn:hover {
         background: linear-gradient(45deg, var(--red), var(--light-red));
@@ -574,10 +564,6 @@ label {
     margin-left: 50px;
 }
 
-.header-title br {
-    display: none;
-}
-
 .carousel-container {
     overflow: hidden;
     border-top: 4px solid var(--red);
@@ -617,16 +603,8 @@ label {
     color: var(--white);
 }
 
-/* .carousel-details * {
-    color: var(--white);
-} */
-
 .carousel-details .post-details {
     margin-bottom: 8px;
-}
-
-.excerpt-show {
-    display: none;
 }
 
 .latest-nav {
@@ -675,7 +653,7 @@ label {
     background-color: var(--red);
 }
 
-.latest-mobile_posts, .latest-mobile_link {
+.latest-mobile_posts, .latest-mobile_link, .excerpt-show, .header-title br {
     display: none;
 }
 
@@ -1482,7 +1460,7 @@ footer a {
         padding-right: 56px;
     }
 
-    .back-btn span:before {
+    .back-btn span::before {
         left: 16px;
         opacity: 1;
     }
@@ -1500,7 +1478,7 @@ footer a {
         padding-left: 100px;
     }
 
-    .scroll-btn span:after {
+    .scroll-btn span::after {
         right: 25px;
         opacity: 1;
         width: 100px;
@@ -1778,12 +1756,6 @@ footer a {
 
     .header-author {
         color: var(--white);
-    }
-
-
-    #postSub span::after {
-        content: "|";
-        padding: 0 100px;
     }
 
     #postSub span {
