@@ -1,6 +1,5 @@
 /* GLOBAL STYLES */
 :root {
-    --blue: #0000FF;
     --light-red: #FF4D52;
     --red: #C1272D;
     --red-transparent: #c1272c50;
@@ -15,9 +14,6 @@
     --dark-blue-green-transparent: #0051425f;
     --brown: #603813;
     --brown-transparent: #a67c52bd;
-    /* --light-brown: #A67C52; */
-    /* --brown: #754C24; */
-    /* --darker-brown: #42210B; */
     --white: #FFFFFF;
     --light-grey: #F0F0F0;
     --grey: #707070;
@@ -1456,12 +1452,20 @@ footer a {
         display: block;
     }
 
-    .header-title h1 {
+    .header-img_small .header-title h1 {
         margin-top: 80px;
     }
 
-    #postHeader {
-        margin-top: 10px;
+    .post-center .header-title {
+        height: 204px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    #postHeader, #postSub {
+        margin: 0 auto;
+        padding-bottom: 16px;
     }
 
     .header-title p {
@@ -1802,22 +1806,36 @@ footer a {
 }
 
 @media (max-width: 360px) {
-    #postSub {
-        flex-direction: column;
+    h1 {
+        font-size: 3rem;
     }
 
-    #postSub span::after {
-        content: "";
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .header-img {
+        grid-template-columns: 1fr;
+    }
+
+    .header-black {
+        display: none;
+    }
+
+    .post-center .header-title {
+        margin: 0 4px;
+    }
+
+    #postHeader {
+        line-height: 52px;
+    }
+
+    #postSub {
+        padding-bottom: 4px;
     }
 
     #postSub span {
-        border-bottom: 2px solid var(--red);
-        width: 158px;
-        margin: auto;
-    }
-
-    #postSub span:last-child {
-        border-style: none;
+        font-size: 12px;
     }
 
     #contactSubmit {
