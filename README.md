@@ -1,67 +1,59 @@
-## Project Exam 1
+# Time/Signature - Project Exam 1
 
-## Goal
+![projectexam1](https://user-images.githubusercontent.com/81162745/203315765-a0cc42c9-39f0-4134-bd32-e8c2ed66fd37.png)
 
-To put into practice the skills learned over your first year of studies.
+A project for a fictional drumming blog where users can read about everything related to drums, percussion, techniques and general music news.
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
--	Home page
--	About page
--	List of blog posts
--	Blog post specific pages
--	Contact page.
+## Description
 
-### Home Page
-The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more posts. For example, by default the user can see four posts, then they can click an arrow on the right to view the next four posts, and click it again to view the next four posts. The user can also click back to view results they had previously seen. This must be implemented for desktop at least, but if you want a simpler layout for mobile, you can change it from being in a carousel.
+This project was created for Project Exam 1, the final project of the first year at NOROFF Frontend design course. For this project I was tasked with creating a blog website with a theme of my choice where I had to use stuff I've learned the two first semesters. The blog posts for the site were to be added in WordPress, using it as a headless CMS, and fetching them using REST API to display them as a carousel/slider on the front page and on a separate page dedicated to the blog posts. The post content had to be fetched using query strings, making the individual blog post page dynamic showing only the details of the post the user clicked on on either the front page or blog list page.
 
-### Blog Page
+Some of the prerequisites were:
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+- A carousel/slider on the front page showing the latest blog posts
+- The blog list page should show a number of posts with a button to show the rest
+- The blog specific page should be dynamically built using query strings
+- A contact form with requirements like "minimum 5 characters"
 
-### Blog Specific Page
+## Built With
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
+The website is built using
 
-If images on the blog post page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+- HTML
+- CSS
+- JavaScript
+- [WordPress](https://wordpress.org/)
 
-### Contact page
+## Getting Started
 
-Create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
--	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
+1. Clone the repo:
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+```bash
+git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-MHerholdt94.git
+```
 
-### WordPress
+2. Install the dependencies:
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+```
+npm i @devholdt/project-exam-1-mherholdt94
+```
 
-The project has two aspects:
--	API from your WordPress installation
--	Your website built with HTML, CSS and JavaScript
+### Running
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+To run the app, run the following commands:
 
-## Level 1 Process
+```bash
+npm run start
+```
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
+## Contributing
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+To contribute to this project, open a pull request to be reviewed.
 
+## Contact
+
+[My Twitter page](https://twitter.com/Harboldtt)
+
+[My LinkedIn page](https://www.linkedin.com/in/mathias-herholdt-b5a5bb204/)
